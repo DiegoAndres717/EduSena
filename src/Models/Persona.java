@@ -4,23 +4,23 @@ package Models;
 public class Persona {
     
     private int id;
-    private int codigo;
+    private String codigo;
     private String nombres;
     private String apellidos;
-    private int nid;
+    private String nid;
     private int grado;
     private int edad;
     private String email;
-    private int telefono;
+    private String telefono;
     private String direccion;
-    private int genero;
+    private String genero;
     private String fecha_nacimiento;
     
 
     public Persona() {
     }
 
-    public Persona(int id, int codigo, String nombres, String apellidos, int nid, int grado, int edad, String email, int telefono, String direccion, int genero, String fecha_nacimiento) {
+    public Persona(int id, String codigo, String nombres, String apellidos, String nid, int grado, int edad, String email, String telefono, String direccion, String genero, String fecha_nacimiento) {
         this.id = id;
         this.codigo = codigo;
         this.nombres = nombres;
@@ -35,8 +35,6 @@ public class Persona {
         this.fecha_nacimiento = fecha_nacimiento;
     }
 
-   
-
     public int getId() {
         return id;
     }
@@ -44,12 +42,12 @@ public class Persona {
     public void setId(int id) {
         this.id = id;
     }
-    
-     public int getCodigo() {
+
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
@@ -69,11 +67,11 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
-    public int getNid() {
+    public String getNid() {
         return nid;
     }
 
-    public void setNid(int nid) {
+    public void setNid(String nid) {
         this.nid = nid;
     }
 
@@ -84,7 +82,7 @@ public class Persona {
     public void setGrado(int grado) {
         this.grado = grado;
     }
-    
+
     public int getEdad() {
         return edad;
     }
@@ -101,11 +99,11 @@ public class Persona {
         this.email = email;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -117,11 +115,11 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public int getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(int genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
@@ -132,5 +130,5 @@ public class Persona {
     public void setFecha_nacimiento(String fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
     }
- 
+   
 }

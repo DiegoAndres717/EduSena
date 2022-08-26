@@ -46,8 +46,6 @@ public class Colegio extends javax.swing.JFrame {
         lblNidAlumno6 = new javax.swing.JLabel();
         txtNidDocente = new javax.swing.JTextField();
         lblGeneroAlumno2 = new javax.swing.JLabel();
-        rbtnGeneroMasDocente = new javax.swing.JRadioButton();
-        rbtnGeneroFemDocente = new javax.swing.JRadioButton();
         lblFehcaNacAlumno2 = new javax.swing.JLabel();
         DateDocente = new com.toedter.calendar.JDateChooser();
         txtDireccionDocente = new javax.swing.JTextField();
@@ -62,6 +60,7 @@ public class Colegio extends javax.swing.JFrame {
         btnBorrarDocente = new javax.swing.JButton();
         btnActualizarDocente = new javax.swing.JButton();
         btnSeleccionarDocente = new javax.swing.JButton();
+        cbxGenero = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDocente = new javax.swing.JTable();
         jPanel11 = new javax.swing.JPanel();
@@ -86,8 +85,6 @@ public class Colegio extends javax.swing.JFrame {
         lblNidAlumno = new javax.swing.JLabel();
         txtNidAlumno = new javax.swing.JTextField();
         lblGeneroAlumno = new javax.swing.JLabel();
-        rbtnGeneroMasAlumno = new javax.swing.JRadioButton();
-        rbtnGeneroFemAlumno = new javax.swing.JRadioButton();
         lblFehcaNacAlumno = new javax.swing.JLabel();
         DateAlumno = new com.toedter.calendar.JDateChooser();
         txtDirecciondAlumno = new javax.swing.JTextField();
@@ -104,6 +101,7 @@ public class Colegio extends javax.swing.JFrame {
         btnBorrarAlumno = new javax.swing.JButton();
         btnSeleccionarAlumno = new javax.swing.JButton();
         btnActualizaAlumno = new javax.swing.JButton();
+        cbxGeneroAlumno = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAlumnos = new javax.swing.JTable();
         jpnNota = new javax.swing.JPanel();
@@ -207,19 +205,6 @@ public class Colegio extends javax.swing.JFrame {
         lblGeneroAlumno2.setForeground(new java.awt.Color(0, 116, 208));
         lblGeneroAlumno2.setText("Genero");
 
-        btnGrupoDocente.add(rbtnGeneroMasDocente);
-        rbtnGeneroMasDocente.setForeground(new java.awt.Color(0, 116, 208));
-        rbtnGeneroMasDocente.setText("Masculino");
-        rbtnGeneroMasDocente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtnGeneroMasDocenteActionPerformed(evt);
-            }
-        });
-
-        btnGrupoDocente.add(rbtnGeneroFemDocente);
-        rbtnGeneroFemDocente.setForeground(new java.awt.Color(0, 116, 208));
-        rbtnGeneroFemDocente.setText("Femenino");
-
         lblFehcaNacAlumno2.setForeground(new java.awt.Color(0, 116, 208));
         lblFehcaNacAlumno2.setText("Fecha de nacimiento");
 
@@ -257,6 +242,8 @@ public class Colegio extends javax.swing.JFrame {
         btnSeleccionarDocente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/emblemdefault_103452.png"))); // NOI18N
         btnSeleccionarDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Masculino", "Femenino" }));
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -284,9 +271,7 @@ public class Colegio extends javax.swing.JFrame {
                                     .addGroup(jPanel10Layout.createSequentialGroup()
                                         .addComponent(lblGeneroAlumno2)
                                         .addGap(18, 18, 18)
-                                        .addComponent(rbtnGeneroMasDocente)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(rbtnGeneroFemDocente))))))
+                                        .addComponent(cbxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(212, 212, 212)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -356,9 +341,8 @@ public class Colegio extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblGeneroAlumno2)
-                    .addComponent(rbtnGeneroMasDocente)
-                    .addComponent(rbtnGeneroFemDocente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                    .addComponent(cbxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFehcaNacAlumno2)
                     .addComponent(DateDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -392,11 +376,11 @@ public class Colegio extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Código", "Nombres", "Apellidos", "Nid", "Edad", "Email", "Telefono", "Dirección", "Fecha de Nacimiento"
+                "Id", "Código", "Nombres", "Apellidos", "Nid", "Edad", "Email", "Telefono", "Dirección", "Genero", "Fecha de Nacimiento"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -461,7 +445,7 @@ public class Colegio extends javax.swing.JFrame {
                 .addGroup(jpnDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addGap(0, 32, Short.MAX_VALUE))
         );
 
         tpanDocente2.addTab("Docentes", jpnDocente);
@@ -532,14 +516,6 @@ public class Colegio extends javax.swing.JFrame {
         lblGeneroAlumno.setForeground(new java.awt.Color(0, 116, 208));
         lblGeneroAlumno.setText("Genero");
 
-        btngrupoAlumno.add(rbtnGeneroMasAlumno);
-        rbtnGeneroMasAlumno.setForeground(new java.awt.Color(0, 116, 208));
-        rbtnGeneroMasAlumno.setText("Masculino");
-
-        btngrupoAlumno.add(rbtnGeneroFemAlumno);
-        rbtnGeneroFemAlumno.setForeground(new java.awt.Color(0, 116, 208));
-        rbtnGeneroFemAlumno.setText("Femenino");
-
         lblFehcaNacAlumno.setForeground(new java.awt.Color(0, 116, 208));
         lblFehcaNacAlumno.setText("Fecha de nacimiento");
 
@@ -579,6 +555,8 @@ public class Colegio extends javax.swing.JFrame {
         btnActualizaAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/cloudrefresh_icon-icons.com_54403.png"))); // NOI18N
         btnActualizaAlumno.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        cbxGeneroAlumno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Masculino", "Femenino" }));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -610,12 +588,12 @@ public class Colegio extends javax.swing.JFrame {
                                                     .addComponent(txtNidAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(lblNidAlumno)
                                                     .addComponent(lblNidAlumno2)
-                                                    .addComponent(txtGradoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                                         .addGap(8, 8, 8)
                                                         .addComponent(btnSeleccionarAlumno)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(btnActualizaAlumno)))))
+                                                        .addComponent(btnActualizaAlumno))
+                                                    .addComponent(txtGradoAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(28, 28, 28)))
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblNombreAlumno1)
@@ -635,18 +613,13 @@ public class Colegio extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnBorrarAlumno))
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel5Layout.createSequentialGroup()
-                                        .addComponent(lblGeneroAlumno)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(rbtnGeneroMasAlumno)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(rbtnGeneroFemAlumno))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                        .addComponent(lblFehcaNacAlumno)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(DateAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblFehcaNacAlumno)
+                                    .addComponent(lblGeneroAlumno))
+                                .addGap(44, 44, 44)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cbxGeneroAlumno, 0, 134, Short.MAX_VALUE)
+                                    .addComponent(DateAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -697,8 +670,7 @@ public class Colegio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblGeneroAlumno)
-                    .addComponent(rbtnGeneroMasAlumno)
-                    .addComponent(rbtnGeneroFemAlumno))
+                    .addComponent(cbxGeneroAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFehcaNacAlumno)
@@ -709,7 +681,7 @@ public class Colegio extends javax.swing.JFrame {
                     .addComponent(btnBorrarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSeleccionarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnActualizaAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         tpanAlumno1.addTab("Alumnos", jPanel5);
@@ -732,11 +704,11 @@ public class Colegio extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Codigo", "Nombres", "Apellidos", "Nid", "Grado", "Edad", "Enail", "Telefono", "Dirección", "Fecha de nacimiento"
+                "Id", "Codigo", "Nombres", "Apellidos", "Nid", "Grado", "Edad", "Enail", "Telefono", "Dirección", "Genero", "Fecha de nacimiento"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1134,10 +1106,6 @@ public class Colegio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEdaAlumn4ActionPerformed
 
-    private void rbtnGeneroMasDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnGeneroMasDocenteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbtnGeneroMasDocenteActionPerformed
-
     // <editor-fold defaultstate="collapsed" desc="Codigo Bonotes">
     private void txtEdaAlumnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEdaAlumnActionPerformed
         // TODO add your handling code here:
@@ -1198,10 +1166,12 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JButton btnBorrarAlumno3;
     public javax.swing.JButton btnBorrarDocente;
     private javax.swing.JButton btnDocente;
-    private javax.swing.ButtonGroup btnGrupoDocente;
+    public javax.swing.ButtonGroup btnGrupoDocente;
     public javax.swing.JButton btnSeleccionarAlumno;
     public javax.swing.JButton btnSeleccionarDocente;
-    private javax.swing.ButtonGroup btngrupoAlumno;
+    public javax.swing.ButtonGroup btngrupoAlumno;
+    public javax.swing.JComboBox<String> cbxGenero;
+    public javax.swing.JComboBox<String> cbxGeneroAlumno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1259,12 +1229,8 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JLabel lblNombreAlumno5;
     private javax.swing.JLabel lblNombreAlumno8;
     private javax.swing.JLabel lblNombreAlumno9;
-    public javax.swing.JRadioButton rbtnGeneroFemAlumno;
     private javax.swing.JRadioButton rbtnGeneroFemAlumno4;
-    public javax.swing.JRadioButton rbtnGeneroFemDocente;
-    public javax.swing.JRadioButton rbtnGeneroMasAlumno;
     private javax.swing.JRadioButton rbtnGeneroMasAlumno4;
-    public javax.swing.JRadioButton rbtnGeneroMasDocente;
     public javax.swing.JTable tblAlumnos;
     public javax.swing.JTable tblDocente;
     private javax.swing.JTable tblNotas;
