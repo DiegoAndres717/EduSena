@@ -8,9 +8,10 @@ import java.sql.*;
  * @author ¡Diego Andres Salas!
  */
 public class Conexion {
+
     private String db = "edusena";
     private String user = "root";
-    private String password = "root";
+    private String password = "";
     private String urlMysql = "jdbc:mysql://localhost/" + db + "?SslMode=none";
     private Connection con = null;
     
