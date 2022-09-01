@@ -8,6 +8,7 @@ import java.sql.*;
  * @author ¡Diego Andres Salas!
  */
 public class Conexion {
+
     private String db = "edusena";
     private String user = "root";
     private String password = "root";

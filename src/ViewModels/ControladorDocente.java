@@ -21,7 +21,7 @@ public final class ControladorDocente implements ActionListener{
     @SuppressWarnings("LeakingThisInConstructor")
     public ControladorDocente(Colegio vista){
         this.vista = vista;
-        this.vista.btnAgregarDocente.addActionListener(this);
+        this.vista.btnAgregarCurso.addActionListener(this);
         this.vista.btnSeleccionarDocente.addActionListener(this);
         this.vista.btnActualizarDocente.addActionListener(this);
         this.vista.btnBorrarDocente.addActionListener(this);
@@ -35,19 +35,18 @@ public final class ControladorDocente implements ActionListener{
     public void listar(JTable tblDocentes){
         modelo = (DefaultTableModel) tblDocentes.getModel();
         List<Persona> listaUsuarios = dao.listar();
-        Object[] object = new Object[11];
+        Object[] object = new Object[10];
         for (int i = 0; i < listaUsuarios.size(); i++) {
             object[0] = listaUsuarios.get(i).getId();
             object[1] = listaUsuarios.get(i).getCodigo();
             object[2] = listaUsuarios.get(i).getNombres();
             object[3] = listaUsuarios.get(i).getApellidos();
             object[4] = listaUsuarios.get(i).getNid();
-            object[5] = listaUsuarios.get(i).getEdad();
-            object[6] = listaUsuarios.get(i).getEmail();
-            object[7] = listaUsuarios.get(i).getTelefono();
-            object[8] = listaUsuarios.get(i).getDireccion();
-            object[9] = listaUsuarios.get(i).getGenero();
-            object[10] = listaUsuarios.get(i).getFecha_nacimiento();
+            object[5] = listaUsuarios.get(i).getEmail();
+            object[6] = listaUsuarios.get(i).getTelefono();
+            object[7] = listaUsuarios.get(i).getDireccion();
+            object[8] = listaUsuarios.get(i).getGenero();
+            object[9] = listaUsuarios.get(i).getFecha_nacimiento();
             modelo.addRow(object);
         }
         vista.tblDocente.setModel(modelo);
@@ -61,7 +60,6 @@ public final class ControladorDocente implements ActionListener{
         String nom = vista.txtNombreDocente.getText();
         String ape = vista.txtApellidoDocente.getText();
         String nid = vista.txtNidDocente.getText();
-        int eda = Integer.parseInt(vista.txtEdadDocente.getText());
         String em = vista.txtEmailDocente.getText();
         String tel = (vista.txtTelefonoDocente.getText());
         String dir = vista.txtDireccionDocente.getText();
@@ -71,7 +69,6 @@ public final class ControladorDocente implements ActionListener{
         us.setNombres(nom);
         us.setApellidos(ape);
         us.setNid(nid);
-        us.setEdad(eda);
         us.setEmail(em);
         us.setTelefono(tel);
         us.setDireccion(dir);
@@ -92,7 +89,6 @@ public final class ControladorDocente implements ActionListener{
         vista.txtNombreDocente.setText(null);
         vista.txtApellidoDocente.setText(null);
         vista.txtNidDocente.setText(null);
-        vista.txtEdadDocente.setText(null);
         vista.txtEmailDocente.setText(null);
         vista.txtTelefonoDocente.setText(null);
         vista.txtDireccionDocente.setText(null);
@@ -108,7 +104,6 @@ public final class ControladorDocente implements ActionListener{
         String nom = vista.txtNombreDocente.getText();
         String ap = vista.txtApellidoDocente.getText();
         String nid = (vista.txtNidDocente.getText());
-        int ed = Integer.parseInt(vista.txtEdadDocente.getText());
         String em = vista.txtEmailDocente.getText();
         String tel = (vista.txtTelefonoDocente.getText());
         String dir = vista.txtDireccionDocente.getText();
@@ -118,7 +113,6 @@ public final class ControladorDocente implements ActionListener{
         us.setNombres(nom);
         us.setApellidos(ap);
         us.setNid(nid);
-        us.setEdad(ed);
         us.setEmail(em);
         us.setTelefono(tel);
         us.setDireccion(dir);
@@ -160,7 +154,7 @@ public final class ControladorDocente implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         //Acción para agregar un registro
-        if(e.getSource() == vista.btnAgregarDocente){
+        if(e.getSource() == vista.btnAgregarCurso){
             agregar();
             limpiartabla();
             listar(vista.tblDocente);
@@ -172,24 +166,21 @@ public final class ControladorDocente implements ActionListener{
             }
             else{
                 vista.txtNidDocente.setEditable(false);
-                vista.txtEdadDocente.setEditable(false);
                 vista.txtCodigoDocente.setEditable(false);
                 int id = Integer.parseInt(vista.tblDocente.getValueAt(fila, 0).toString());
                 String cod = (vista.tblDocente.getValueAt(fila, 1).toString());
                 String nom = vista.tblDocente.getValueAt(fila, 2).toString();
                 String ap = vista.tblDocente.getValueAt(fila, 3).toString();
                 String nid = (vista.tblDocente.getValueAt(fila, 4).toString());
-                int ed = Integer.parseInt(vista.tblDocente.getValueAt(fila, 5).toString());
-                String em = vista.tblDocente.getValueAt(fila, 6).toString();
-                String tel = (vista.tblDocente.getValueAt(fila, 7).toString());
-                String dir = vista.tblDocente.getValueAt(fila, 8).toString();
-                String gen = vista.tblDocente.getValueAt(fila, 9).toString();
-                String fec = vista.tblDocente.getValueAt(fila, 10).toString();
+                String em = vista.tblDocente.getValueAt(fila, 5).toString();
+                String tel = (vista.tblDocente.getValueAt(fila, 6).toString());
+                String dir = vista.tblDocente.getValueAt(fila, 7).toString();
+                String gen = vista.tblDocente.getValueAt(fila, 8).toString();
+                String fec = vista.tblDocente.getValueAt(fila, 9).toString();
                 vista.txtCodigoDocente.setText(""+cod);
                 vista.txtNombreDocente.setText(nom);
                 vista.txtApellidoDocente.setText(ap);
                 vista.txtNidDocente.setText(""+nid);
-                vista.txtEdadDocente.setText(""+ed);
                 vista.txtEmailDocente.setText(em);
                 vista.txtTelefonoDocente.setText(""+tel);
                 vista.txtDireccionDocente.setText(dir);

@@ -9,7 +9,7 @@ public class Persona {
     private String apellidos;
     private String nid;
     private int grado;
-    private int edad;
+    private String contraseña;
     private String email;
     private String telefono;
     private String direccion;
@@ -20,14 +20,15 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int id, String codigo, String nombres, String apellidos, String nid, int grado, int edad, String email, String telefono, String direccion, String genero, String fecha_nacimiento) {
+    public Persona(int id, String codigo, String nombres, String apellidos, String nid, 
+            int grado, String contraseña, String email, String telefono, String direccion, String genero, String fecha_nacimiento) {
         this.id = id;
         this.codigo = codigo;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.nid = nid;
         this.grado = grado;
-        this.edad = edad;
+        this.contraseña = contraseña;
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
@@ -83,12 +84,12 @@ public class Persona {
         this.grado = grado;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setContraseña(String edad) {
+        this.contraseña = contraseña;
     }
 
     public String getEmail() {
