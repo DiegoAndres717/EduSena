@@ -20,9 +20,9 @@ public final class ControladorCursos implements ActionListener{
     @SuppressWarnings("LeakingThisInConstructor")
     public ControladorCursos(Colegio vista){
         this.vista = vista;
-        this.vista.btnAgregarACurso.addActionListener(this);
+        this.vista.btnAgregarCursos.addActionListener(this);
         this.vista.btnSeleccionarCurso.addActionListener(this);
-        this.vista.btnActualizaCurso.addActionListener(this);
+        this.vista.btnActualizarCurso.addActionListener(this);
         this.vista.btnBorrarCurso.addActionListener(this);
         ListarCursos(vista.tblCursos);
     }
@@ -115,7 +115,7 @@ public final class ControladorCursos implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         //Acción para agregar un registro
-        if(e.getSource() == vista.btnAgregarACurso){
+        if(e.getSource() == vista.btnAgregarCursos){
             agregarCurso();
             limpiartablaCurso();
             ListarCursos(vista.tblCursos);
@@ -137,7 +137,7 @@ public final class ControladorCursos implements ActionListener{
                 vista.txtCursoidProfesor.setText(nom);
             }
         }
-        if(e.getSource() == vista.btnActualizaCurso){
+        if(e.getSource() == vista.btnActualizarCurso){
             actualizarCurso();
             limpiartablaCurso();
             ListarCursos(vista.tblCursos);

@@ -55,8 +55,8 @@ public final class ControladorNotas implements ActionListener{
         int codcu = Integer.parseInt(vista.txtCodidoNotaDoc.getText());
         int codal = Integer.parseInt(vista.txtCodigoAlumnNotaDoc.getText());
         double n1 = Double.parseDouble(vista.txtNota1.getText());
-        double n2 = Double.parseDouble(vista.txtNota1.getText());
-        double n3 = Double.parseDouble(vista.txtNota1.getText());
+        double n2 = Double.parseDouble(vista.txtNota2.getText());
+        double n3 = Double.parseDouble(vista.txtNota3.getText());
         double n4 = Double.parseDouble(vista.txtNota4.getText());
         double pro =Double.parseDouble(vista.txtPromedio.getText());
         us.setIdCurso(codcu);

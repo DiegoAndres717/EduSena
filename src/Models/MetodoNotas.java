@@ -1,25 +1,31 @@
 package Models;
+
 import Conexion.Conexion;
+import Views.Colegio;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.swing.table.DefaultTableModel;
 
 public class MetodoNotas {
+    
+    Colegio cole = new Colegio();
     Conexion conectar = new Conexion();
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
-    
-    public List listar(){
-        
+    DefaultTableModel modelo = new DefaultTableModel();
+    Colegio vista = new Colegio();
+
+    public List listar() {
+
         List<Notas> lista = new ArrayList();
         String sql = "SELECT * FROM notas";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Notas u = new Notas();
                 u.setId(rs.getInt("idNotas"));
                 u.setIdCurso(rs.getInt("idCurso"));
@@ -36,7 +42,40 @@ public class MetodoNotas {
         return lista;
     }
     
-    public int agregar(Notas u){
+    public List listarBusqueda() {
+
+        List<Notas> listas = new ArrayList();
+        String idalumno = vista.txtCodigoBuscarNota.getText();
+        String idcurso = vista.txtBuscaIdMateriaNotas.getText();
+        String where=" where 1=1";
+        if (!idalumno.isEmpty() ) {
+            where=where+" and idAlumno='"+idalumno+"' ";
+        }
+        if (!idalumno.isEmpty()) {
+            where=where+" and idCurso='"+idcurso+"' ";
+        }
+        
+        String sql = "SELECT * FROM edusena.notas "+where+"";
+        try {
+            con = conectar.getConnecion();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next() == true) {
+                Notas u = new Notas();
+                u.setNota1(rs.getDouble("nota1"));
+                u.setNota2(rs.getDouble("nota2"));
+                u.setNota3(rs.getDouble("nota3"));
+                u.setNota4(rs.getDouble("nota4"));
+                u.setPromedio(rs.getDouble("promedio"));
+                listas.add(u);
+            }
+        } catch (SQLException e) {
+            System.out.println("No hay acceso a la base de datos");
+        }
+        return listas;
+    }
+
+    public int agregar(Notas u) {
         int r = 1;
         String sql = "INSERT INTO edusena.notas (idCurso, idAlumno, nota1, nota2, nota3, nota4, "
                 + "promedio) VALUES(?,?,?,?,?,?,?)";
@@ -51,10 +90,9 @@ public class MetodoNotas {
             ps.setString(6, Double.toString(u.getNota4()));
             ps.setString(7, Double.toString(u.getPromedio()));
             ps.executeUpdate();
-            if(r == 1){
+            if (r == 1) {
                 return 1;
-            }
-            else{
+            } else {
                 return 0;
             }
         } catch (SQLException e) {
@@ -62,8 +100,8 @@ public class MetodoNotas {
         }
         return r;
     }
-    
-    public int actualizarNota(Notas u){
+
+    public int actualizarNota(Notas u) {
         int r = 1;
         String sql = "UPDATE edusena.notas SET idAlumno=?, nota1=?, nota2=?,"
                 + "nota3=?, nota4=?, promedio=? WHERE idCurso=?";
@@ -78,10 +116,9 @@ public class MetodoNotas {
             ps.setString(6, Double.toString(u.getPromedio()));
             ps.setString(7, Integer.toString(u.getIdCurso()));
             ps.executeUpdate();
-            if(r == 1){
+            if (r == 1) {
                 return 1;
-            }
-            else{
+            } else {
                 return 0;
             }
         } catch (SQLException e) {
@@ -89,9 +126,9 @@ public class MetodoNotas {
         }
         return r;
     }
-    
-    public void eliminar(int doc){
-        String sql = "DELETE FROM edusena.notas WHERE id="+doc;
+
+    public void eliminar(int doc) {
+        String sql = "DELETE FROM edusena.notas WHERE id=" + doc;
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);

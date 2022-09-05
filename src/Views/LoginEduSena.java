@@ -6,6 +6,7 @@ import ViewModels.ControladorCursos;
 import ViewModels.ControladorDocente;
 import ViewModels.ControladorLogin;
 import ViewModels.ControladorNotas;
+import ViewModels.ControladorUsuario;
 import java.awt.Color;
 import java.awt.Image;
 import java.sql.*;
@@ -68,9 +69,8 @@ public class LoginEduSena extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         cbxRoles = new javax.swing.JComboBox<>();
         barraMover = new javax.swing.JPanel();
-        btnCerrar = new javax.swing.JPanel();
-        txtCerrar = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
+        btnSalirLogin = new newscomponents.RSButtonIcon_new();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -159,50 +159,15 @@ public class LoginEduSena extends javax.swing.JFrame {
             }
         });
 
-        btnCerrar.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtCerrar.setFont(new java.awt.Font("Roboto Light", 1, 24)); // NOI18N
-        txtCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtCerrar.setText("X");
-        txtCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtCerrarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                txtCerrarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtCerrarMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout btnCerrarLayout = new javax.swing.GroupLayout(btnCerrar);
-        btnCerrar.setLayout(btnCerrarLayout);
-        btnCerrarLayout.setHorizontalGroup(
-            btnCerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-        );
-        btnCerrarLayout.setVerticalGroup(
-            btnCerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCerrarLayout.createSequentialGroup()
-                .addComponent(txtCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout barraMoverLayout = new javax.swing.GroupLayout(barraMover);
         barraMover.setLayout(barraMoverLayout);
         barraMoverLayout.setHorizontalGroup(
             barraMoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(barraMoverLayout.createSequentialGroup()
-                .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 764, Short.MAX_VALUE))
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         barraMoverLayout.setVerticalGroup(
             barraMoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, barraMoverLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
         bg.add(barraMover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
@@ -224,7 +189,19 @@ public class LoginEduSena extends javax.swing.JFrame {
                 btnIngresarActionPerformed(evt);
             }
         });
-        bg.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
+        bg.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 90, 30));
+
+        btnSalirLogin.setBackground(new java.awt.Color(255, 51, 51));
+        btnSalirLogin.setBorder(new javax.swing.border.MatteBorder(null));
+        btnSalirLogin.setText("Salir");
+        btnSalirLogin.setBackgroundHover(new java.awt.Color(204, 0, 0));
+        btnSalirLogin.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.CLOSE);
+        btnSalirLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirLoginActionPerformed(evt);
+            }
+        });
+        bg.add(btnSalirLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -255,24 +232,6 @@ public class LoginEduSena extends javax.swing.JFrame {
         int y = evt.getYOnScreen();
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_barraMoverMouseDragged
-
-    private void txtCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseClicked
-        int sa = JOptionPane.YES_NO_OPTION;
-        int resultado = JOptionPane.showConfirmDialog(this, "¿Desea Salir?", "Salir!", sa);
-        if (resultado == 0) {
-            System.exit(0);
-        }
-    }//GEN-LAST:event_txtCerrarMouseClicked
-
-    private void txtCerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseEntered
-        btnCerrar.setBackground(Color.red);
-        txtCerrar.setForeground(Color.white);
-    }//GEN-LAST:event_txtCerrarMouseEntered
-
-    private void txtCerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCerrarMouseExited
-        btnCerrar.setBackground(Color.white);
-        txtCerrar.setForeground(Color.black);
-    }//GEN-LAST:event_txtCerrarMouseExited
 
     private void txtUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMousePressed
         if (txtUsuario.getText().equals("Ingrese su nombre de usuario")) {
@@ -349,6 +308,7 @@ public class LoginEduSena extends javax.swing.JFrame {
                         ControladorAlumno al = new ControladorAlumno(rector);
                         ControladorDocente doc = new ControladorDocente(rector);
                         ControladorCursos conre = new ControladorCursos(rector);
+                        ControladorUsuario uss = new ControladorUsuario(rector);
                         rector.setVisible(true);
                         break;
                     }
@@ -362,6 +322,7 @@ public class LoginEduSena extends javax.swing.JFrame {
                         ControladorAlumno cona = new ControladorAlumno(docente);
                         ControladorNotas N = new ControladorNotas(docente);
                         ControladorCursos C = new ControladorCursos(docente);
+                        ControladorUsuario uss = new ControladorUsuario(docente);
                         docente.setVisible(true);
                         break;
                     }
@@ -375,6 +336,7 @@ public class LoginEduSena extends javax.swing.JFrame {
                         ControladorDocente D = new ControladorDocente(alumno);
                         ControladorNotas N = new ControladorNotas(alumno);
                         ControladorCursos C = new ControladorCursos(alumno);
+                        ControladorUsuario uss = new ControladorUsuario(alumno);
                         alumno.setVisible(true);
                         break;
                     }
@@ -421,6 +383,14 @@ public class LoginEduSena extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtPasswordKeyReleased
 
+    private void btnSalirLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirLoginActionPerformed
+        int sa = JOptionPane.YES_NO_OPTION;
+        int resultado = JOptionPane.showConfirmDialog(this, "¿Desea Salir?", "Salir!", sa);
+        if (resultado == 0) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnSalirLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -459,8 +429,8 @@ public class LoginEduSena extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel barraMover;
     public transient javax.swing.JPanel bg;
-    private javax.swing.JPanel btnCerrar;
     public javax.swing.JButton btnIngresar;
+    private newscomponents.RSButtonIcon_new btnSalirLogin;
     public javax.swing.JComboBox<String> cbxRoles;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -470,7 +440,6 @@ public class LoginEduSena extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel jlbContraseña;
     private javax.swing.JLabel jlbUsuario;
-    private javax.swing.JLabel txtCerrar;
     public transient javax.swing.JPasswordField txtPassword;
     public transient javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
