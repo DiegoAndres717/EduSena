@@ -138,7 +138,6 @@ public final class ControladorNotas implements ActionListener{
             }
             else{
                 vista.txtNidDocente.setEditable(false);
-                vista.txtCodigoDocente.setEditable(false);
                 int id = Integer.parseInt(vista.tblNotasDocente.getValueAt(fila, 0).toString());
                 int cod = Integer.parseInt(vista.tblNotasDocente.getValueAt(fila, 1).toString());
                 int nom = Integer.parseInt(vista.tblNotasDocente.getValueAt(fila, 2).toString());

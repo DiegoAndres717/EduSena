@@ -37,9 +37,8 @@ public final class ControladorCursos implements ActionListener{
         Object[] object = new Object[4];
         for (int i = 0; i < listacursos.size(); i++) {
             object[0] = listacursos.get(i).getId();
-            object[1] = listacursos.get(i).getCodigoCurso();
-            object[2] = listacursos.get(i).getMateria();
-            object[3] = listacursos.get(i).getIdProfesor();
+            object[1] = listacursos.get(i).getMateria();
+            object[2] = listacursos.get(i).getIdProfesor();
             modelo.addRow(object);
         }
         vista.tblCursos.setModel(modelo);
@@ -49,10 +48,8 @@ public final class ControladorCursos implements ActionListener{
      *metodo para agregar a la tabla
      */
     public void agregarCurso(){
-        String cocu = (vista.txtCodigoCurso.getText());
         String cod = vista.cbxCursoMateria.getSelectedItem().toString();
         String nom = vista.txtCursoidProfesor.getText();
-        us.setCodigoCurso(""+cocu);
         us.setMateria(cod);
         us.setIdProfesor(nom);
         int r = cur.agregarCurso(us);
@@ -70,10 +67,8 @@ public final class ControladorCursos implements ActionListener{
      *Metodo para actualizar la tabla
      */
     public void actualizarCurso(){
-        String gra = vista.txtCodigoCurso.getText();
         String gen = vista.cbxCursoMateria.getSelectedItem().toString();
         String cod = (vista.txtCursoidProfesor.getText());
-        us.setCodigoCurso(gra);
         us.setMateria(gen);
         us.setIdProfesor(cod);
         int r = cur.actualizarCu(us);
@@ -101,7 +96,6 @@ public final class ControladorCursos implements ActionListener{
     }
     //metodo para limpiar los campos de textos
     public void limpiarCampos(){
-        vista.txtCodigoCurso.setText(null);
         vista.cbxCursoMateria.setSelectedItem(0);
         vista.txtCursoidProfesor.setText(null);
     }
@@ -126,13 +120,10 @@ public final class ControladorCursos implements ActionListener{
                 JOptionPane.showMessageDialog(vista, "Debe seleccionar un registro");
             }
             else{
-                vista.txtNidAlumno.setEditable(false);
-                vista.txtCodigoAlumn.setEditable(false);
+                //vista.txtNidAlumno.setEditable(false);
                 int id = Integer.parseInt(vista.tblCursos.getValueAt(fila, 0).toString());
-                String cocu = vista.tblCursos.getValueAt(fila, 1).toString();
-                String cod = vista.tblCursos.getValueAt(fila, 2).toString();
-                String nom = vista.tblCursos.getValueAt(fila, 3).toString();
-                vista.txtCodigoCurso.setText(cocu);
+                String cod = vista.tblCursos.getValueAt(fila, 1).toString();
+                String nom = vista.tblCursos.getValueAt(fila, 2).toString();
                 vista.cbxCursoMateria.setSelectedItem(cod);
                 vista.txtCursoidProfesor.setText(nom);
             }

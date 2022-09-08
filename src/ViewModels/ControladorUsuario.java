@@ -118,7 +118,7 @@ public final class ControladorUsuario implements ActionListener{
                 JOptionPane.showMessageDialog(vista, "Debe seleccionar un registro");
             }
             else{
-                vista.cbxRolUsuario.setEditable(false);
+                //vista.cbxRolUsuario.setEditable(false);
                 int id = Integer.parseInt(vista.tblUsuarios.getValueAt(fila, 0).toString());
                 String cocu = vista.tblUsuarios.getValueAt(fila, 1).toString();
                 String cod = vista.tblUsuarios.getValueAt(fila, 2).toString();

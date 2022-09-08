@@ -182,12 +182,12 @@
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Recursos/johns-hopkins-university-g187de0a87_1920 (1).jpg"/>
+                      <Image iconType="3" name="/Recursos/Colegio (1).jpg"/>
                     </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="0" y="0" width="1010" height="570"/>
+                      <AbsoluteConstraints x="0" y="0" width="1040" height="570"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1218,7 +1218,8 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jPanel14" min="-2" pref="48" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
@@ -1557,7 +1558,7 @@
                                       <Component id="btnSeleccionarCurso" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="btnBorrarCurso" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                                  <EmptySpace pref="93" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1737,29 +1738,6 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="lblCodigoAlumno4">
-                          <Properties>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d0" green="74" red="0" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Codigo"/>
-                          </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="68" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtCodigoDocente">
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                          </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="82" width="127" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="lblNombreAlumno4">
                           <Properties>
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1769,7 +1747,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="113" width="-1" height="-1"/>
+                              <AbsoluteConstraints x="40" y="60" width="-1" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1779,7 +1757,7 @@
                           </AuxValues>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="128" width="130" height="-1"/>
+                              <AbsoluteConstraints x="30" y="80" width="130" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1789,7 +1767,7 @@
                           </AuxValues>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="179" width="130" height="-1"/>
+                              <AbsoluteConstraints x="30" y="130" width="130" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1802,7 +1780,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="159" width="-1" height="-1"/>
+                              <AbsoluteConstraints x="30" y="110" width="-1" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1815,7 +1793,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="206" width="-1" height="-1"/>
+                              <AbsoluteConstraints x="30" y="160" width="-1" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -1825,7 +1803,7 @@
                           </AuxValues>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="41" y="226" width="128" height="-1"/>
+                              <AbsoluteConstraints x="30" y="180" width="128" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -2081,58 +2059,51 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="lblFehcaNacAlumno" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lblGeneroAlumno" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="cbxGeneroAlumno" max="32767" attributes="0"/>
+                                                      <Component id="DateAlumno" min="-2" pref="134" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="btnSeleccionarAlumno" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="txtNidAlumno" min="-2" pref="128" max="-2" attributes="0"/>
-                                                      <Component id="lblNidAlumno" min="-2" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Group type="103" groupAlignment="1" attributes="0">
-                                                              <Component id="lblFehcaNacAlumno" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="lblGeneroAlumno" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="cbxGeneroAlumno" max="32767" attributes="0"/>
-                                                              <Component id="DateAlumno" min="-2" pref="134" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="btnSeleccionarAlumno" min="-2" pref="97" max="-2" attributes="0"/>
+                                                      <Component id="btnAgregarAlumno" min="-2" pref="83" max="-2" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="btnActualizaAlumno" min="-2" pref="97" max="-2" attributes="0"/>
                                                           <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="btnAgregarAlumno" min="-2" pref="83" max="-2" attributes="0"/>
-                                                              <Group type="102" attributes="0">
-                                                                  <Component id="btnActualizaAlumno" min="-2" pref="97" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                                                  <Component id="btnBorrarAlumno" min="-2" pref="101" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
+                                                          <Component id="btnBorrarAlumno" min="-2" pref="101" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="txtNidAlumno" min="-2" pref="128" max="-2" attributes="0"/>
+                                                              <Component id="lblNidAlumno" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
                                                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="1" attributes="0">
                                                               <Component id="lblApellidoAlumno" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="lblNombreAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="txtNombreAlumno" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                                                  <Component id="txtApellidoAlumno" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="lblNombreAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txtNombreAlumno" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                                          <Component id="txtApellidoAlumno" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="txtCodigoAlumn" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
-                                                      <Component id="lblCodigoAlumno" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="lblNombreAlumno1" min="-2" max="-2" attributes="0"/>
                                                       <Component id="txtEmailAlumno" min="-2" pref="130" max="-2" attributes="0"/>
@@ -2165,22 +2136,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lblCodigoAlumno" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                          <Component id="txtCodigoAlumn" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblNombreAlumno" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtNombreAlumno" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblApellidoAlumno" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                          <Component id="txtApellidoAlumno" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="txtTelefonoAlumno" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="1" attributes="0">
@@ -2202,22 +2158,29 @@
                                                   <Component id="txtDirecciondAlumno" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="lblNidAlumno" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtNidAlumno" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                           <Component id="lblNidAlumno2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="txtGradoAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="lblNombreAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtNombreAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lblApellidoAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                          <Component id="txtApellidoAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                          <Component id="lblNidAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtNidAlumno" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="lblGeneroAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="cbxGeneroAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2227,7 +2190,7 @@
                                       <Component id="lblFehcaNacAlumno" min="-2" max="-2" attributes="0"/>
                                       <Component id="DateAlumno" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnAgregarAlumno" min="-2" pref="30" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -2235,7 +2198,7 @@
                                       <Component id="btnActualizaAlumno" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="btnBorrarAlumno" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="56" max="32767" attributes="0"/>
+                                  <EmptySpace pref="53" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2251,19 +2214,6 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Informaci&#xf3;n del Alumno"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="lblCodigoAlumno">
-                          <Properties>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d0" green="74" red="0" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Codigo"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="txtCodigoAlumn">
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                          </AuxValues>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lblNombreAlumno">
                           <Properties>
@@ -2764,12 +2714,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane3" alignment="0" pref="594" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" alignment="0" pref="610" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane3" alignment="0" pref="476" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" alignment="0" pref="458" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -2784,8 +2734,7 @@
                             <Component class="RSMaterialComponent.RSTableMetro" name="tblCursos">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                  <Table columnCount="4" rowCount="0">
-                                    <Column editable="true" title="ID" type="java.lang.Object"/>
+                                  <Table columnCount="3" rowCount="0">
                                     <Column editable="true" title="C&#xf3;digo Curso" type="java.lang.Object"/>
                                     <Column editable="true" title="Materia" type="java.lang.Object"/>
                                     <Column editable="true" title="Id Profesor" type="java.lang.Object"/>
@@ -2799,11 +2748,6 @@
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0">
-                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                      <Title/>
-                                      <Editor/>
-                                      <Renderer/>
-                                    </Column>
                                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                       <Title/>
                                       <Editor/>
@@ -2850,7 +2794,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane4" alignment="0" pref="476" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" alignment="0" pref="458" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -2865,9 +2809,8 @@
                             <Component class="RSMaterialComponent.RSTableMetro" name="tblDocente">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                  <Table columnCount="10" rowCount="0">
+                                  <Table columnCount="9" rowCount="0">
                                     <Column editable="true" title="ID" type="java.lang.Object"/>
-                                    <Column editable="true" title="C&#xf3;digo" type="java.lang.Object"/>
                                     <Column editable="true" title="Nombres" type="java.lang.Object"/>
                                     <Column editable="true" title="Apellidos" type="java.lang.Object"/>
                                     <Column editable="true" title="Nid" type="java.lang.Object"/>
@@ -2886,11 +2829,6 @@
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0">
-                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                      <Title/>
-                                      <Editor/>
-                                      <Renderer/>
-                                    </Column>
                                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                       <Title/>
                                       <Editor/>
@@ -2967,7 +2905,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane2" alignment="0" pref="476" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" alignment="0" pref="458" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -2982,9 +2920,8 @@
                             <Component class="RSMaterialComponent.RSTableMetro" name="tblAlumnos">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                  <Table columnCount="11" rowCount="0">
+                                  <Table columnCount="10" rowCount="0">
                                     <Column editable="true" title="Id" type="java.lang.Object"/>
-                                    <Column editable="true" title="C&#xf3;digo" type="java.lang.Object"/>
                                     <Column editable="true" title="Nombres" type="java.lang.Object"/>
                                     <Column editable="true" title="Apellidos" type="java.lang.Object"/>
                                     <Column editable="true" title="Nid" type="java.lang.Object"/>
@@ -3004,11 +2941,6 @@
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0">
-                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                                      <Title/>
-                                      <Editor/>
-                                      <Renderer/>
-                                    </Column>
                                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                       <Title/>
                                       <Editor/>
@@ -3091,7 +3023,7 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jScrollPane1" pref="465" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" pref="447" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
