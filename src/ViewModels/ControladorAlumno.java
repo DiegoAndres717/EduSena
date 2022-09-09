@@ -35,29 +35,42 @@ public final class ControladorAlumno implements ActionListener{
     public void ListarAlumno(JTable tblAlumnos){
         modelo = (DefaultTableModel) tblAlumnos.getModel();
         List<Persona> listaUsuarios = alum.listar();
-        Object[] object = new Object[11];
+        Object[] object = new Object[10];
         for (int i = 0; i < listaUsuarios.size(); i++) {
             object[0] = listaUsuarios.get(i).getId();
-            object[1] = listaUsuarios.get(i).getCodigo();
-            object[2] = listaUsuarios.get(i).getNombres();
-            object[3] = listaUsuarios.get(i).getApellidos();
-            object[4] = listaUsuarios.get(i).getNid();
-            object[5] = listaUsuarios.get(i).getGrado();
-            object[6] = listaUsuarios.get(i).getEmail();
-            object[7] = listaUsuarios.get(i).getTelefono();
-            object[8] = listaUsuarios.get(i).getDireccion();
-            object[9] = listaUsuarios.get(i).getGenero();
-            object[10] = listaUsuarios.get(i).getFecha_nacimiento();
+            object[1] = listaUsuarios.get(i).getNombres();
+            object[2] = listaUsuarios.get(i).getApellidos();
+            object[3] = listaUsuarios.get(i).getNid();
+            object[4] = listaUsuarios.get(i).getGrado();
+            object[5] = listaUsuarios.get(i).getEmail();
+            object[6] = listaUsuarios.get(i).getTelefono();
+            object[7] = listaUsuarios.get(i).getDireccion();
+            object[8] = listaUsuarios.get(i).getGenero();
+            object[9] = listaUsuarios.get(i).getFecha_nacimiento();
             modelo.addRow(object);
         }
         vista.tblAlumnos.setModel(modelo);
+    }
+    
+    public void MostrarAlumno(){
+        if (us.getId() == 1) {
+        vista.txtNombreAlumno1.setText(us.getNombres());
+        vista.txtApellidoAlumno1.setText(us.getApellidos());
+        vista.txtNidAlumno1.setText(us.getNid());
+        vista.txtEmailAlumno1.setText(us.getEmail());
+        vista.txtTelefonoAlumno1.setText(us.getTelefono());
+        vista.txtDireccionAlumno1.setText(us.getDireccion());
+        vista.txtGradoAlumno1.setText(String.valueOf(us.getGrado()));
+        vista.txtGeneroAlumno.setText(us.getGenero());
+        vista.txtFechaNacimientoAlumno.setText(us.getFecha_nacimiento());
+        }
     }
     
     /**
      *metodo para agregar a la tabla
      */
     public void agregarAlu(){
-        String cod = (vista.txtCodigoAlumn.getText());
+        //int al = Integer.parseInt(vista.txtCodigoAlumno.getText());
         String nom = vista.txtNombreAlumno.getText();
         String ape = vista.txtApellidoAlumno.getText();
         String nid = (vista.txtNidAlumno.getText());
@@ -67,7 +80,7 @@ public final class ControladorAlumno implements ActionListener{
         String dir = vista.txtDirecciondAlumno.getText();
         String gen = vista.cbxGeneroAlumno.getSelectedItem().toString();
         String fec = ((JTextField)vista.DateAlumno.getDateEditor().getUiComponent()).getText();
-        us.setCodigo(cod);
+        //us.setId(al);
         us.setNombres(nom);
         us.setApellidos(ape);
         us.setNid(nid);
@@ -77,7 +90,7 @@ public final class ControladorAlumno implements ActionListener{
         us.setDireccion(dir);
         us.setGenero(gen);
         us.setFecha_nacimiento(fec);
-        int r = alum.agregar(us);
+        int r = alum.agregarAlumno(us);
         if(r == 1){
             JOptionPane.showMessageDialog(vista, "Registro exitoso!");
             limpiarCampos();
@@ -92,7 +105,7 @@ public final class ControladorAlumno implements ActionListener{
      *Metodo para actualizar la tabla
      */
     public void actualizarAlumno(){
-        String cod = (vista.txtCodigoAlumn.getText());
+        //int al = Integer.parseInt(vista.txtCodigoAlumno.getText());
         String nom = vista.txtNombreAlumno.getText();
         String ap = vista.txtApellidoAlumno.getText();
         String nid = (vista.txtNidAlumno.getText());
@@ -102,7 +115,7 @@ public final class ControladorAlumno implements ActionListener{
         String dir = vista.txtDirecciondAlumno.getText();
         String gen = vista.cbxGeneroAlumno.getSelectedItem().toString();
         String fec = vista.DateAlumno.getDateFormatString();
-        us.setCodigo(cod);
+        //us.setId(al);
         us.setNombres(nom);
         us.setApellidos(ap);
         us.setNid(nid);
@@ -137,7 +150,7 @@ public final class ControladorAlumno implements ActionListener{
     }
     //metodo para limpiar los campos de textos
     public void limpiarCampos(){
-        vista.txtCodigoAlumn.setText(null);
+        //vista.txtCodigoAlumno.setText(null);
         vista.txtNombreAlumno.setText(null);
         vista.txtApellidoAlumno.setText(null);
         vista.txtNidAlumno.setText(null);
@@ -172,17 +185,16 @@ public final class ControladorAlumno implements ActionListener{
                 //vista.txtNidAlumno.setEditable(false);
                 //vista.txtCodigoAlumn.setEditable(false);
                 int id = Integer.parseInt(vista.tblAlumnos.getValueAt(fila, 0).toString());
-                String cod = (vista.tblAlumnos.getValueAt(fila, 1).toString());
-                String nom = vista.tblAlumnos.getValueAt(fila, 2).toString();
-                String ap = vista.tblAlumnos.getValueAt(fila, 3).toString();
-                String nid = (vista.tblAlumnos.getValueAt(fila, 4).toString());
-                int gra = Integer.parseInt(vista.tblAlumnos.getValueAt(fila, 5).toString());
-                String em = vista.tblAlumnos.getValueAt(fila, 6).toString();
-                String tel = (vista.tblAlumnos.getValueAt(fila, 7).toString());
-                String dir = vista.tblAlumnos.getValueAt(fila, 8).toString();
-                String gen = vista.tblAlumnos.getValueAt(fila, 9).toString();
-                String fec = vista.tblAlumnos.getValueAt(fila, 10).toString();
-                vista.txtCodigoAlumn.setText(""+cod);
+                String nom = vista.tblAlumnos.getValueAt(fila, 1).toString();
+                String ap = vista.tblAlumnos.getValueAt(fila, 2).toString();
+                String nid = (vista.tblAlumnos.getValueAt(fila, 3).toString());
+                int gra = Integer.parseInt(vista.tblAlumnos.getValueAt(fila, 4).toString());
+                String em = vista.tblAlumnos.getValueAt(fila, 5).toString();
+                String tel = (vista.tblAlumnos.getValueAt(fila, 6).toString());
+                String dir = vista.tblAlumnos.getValueAt(fila, 7).toString();
+                String gen = vista.tblAlumnos.getValueAt(fila, 8).toString();
+                String fec = vista.tblAlumnos.getValueAt(fila, 9).toString();
+                //vista.txtCodigoAlumno.setText(""+id);
                 vista.txtNombreAlumno.setText(nom);
                 vista.txtApellidoAlumno.setText(ap);
                 vista.txtNidAlumno.setText(""+nid);
@@ -204,6 +216,7 @@ public final class ControladorAlumno implements ActionListener{
             limpiartablaAlumno();
             ListarAlumno(vista.tblAlumnos);
         }
+        
     }
     
 }

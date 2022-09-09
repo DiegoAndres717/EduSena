@@ -1,7 +1,10 @@
 package Views;
 
 import Conexion.Conexion;
+import Models.MetodoAlumno;
+import Models.Persona;
 import ViewModels.ControladorAlumno;
+import ViewModels.ControladorBuscarNotas;
 import ViewModels.ControladorCursos;
 import ViewModels.ControladorDocente;
 import ViewModels.ControladorLogin;
@@ -298,6 +301,7 @@ public class LoginEduSena extends javax.swing.JFrame {
                 }
                 if (pass.equals(pa) && user.equals(us) && roll.equals("Estudiante")) {
                     x = 3;
+                    
                 }
                 switch (x) {
                     case 1 -> {
@@ -316,8 +320,8 @@ public class LoginEduSena extends javax.swing.JFrame {
                         //Colegio.Tipo_Usuario = "Docente";
                         Colegio docente = new Colegio();
                         this.setVisible(false);
-                        docente.btnAlumno.setVisible(false);
-                        docente.btnRectoria.setVisible(false);
+                        Colegio.btnAlumno.setVisible(false);
+                        Colegio.btnRectoria.setVisible(false);
                         ControladorDocente conde = new ControladorDocente(docente);
                         ControladorAlumno cona = new ControladorAlumno(docente);
                         ControladorNotas N = new ControladorNotas(docente);
@@ -330,14 +334,17 @@ public class LoginEduSena extends javax.swing.JFrame {
                         // Colegio.Tipo_Usuario = "Estudiante";
                         this.setVisible(false);
                         Colegio alumno = new Colegio();
-                        alumno.btnDocente.setVisible(false);
-                        alumno.btnRectoria.setVisible(false);
+                        Colegio.btnDocente.setVisible(false);
+                        Colegio.btnRectoria.setVisible(false);
                         ControladorAlumno cona = new ControladorAlumno(alumno);
                         ControladorDocente D = new ControladorDocente(alumno);
+                        MetodoAlumno ma = new MetodoAlumno();
                         ControladorNotas N = new ControladorNotas(alumno);
                         ControladorCursos C = new ControladorCursos(alumno);
                         ControladorUsuario uss = new ControladorUsuario(alumno);
+                        ControladorBuscarNotas no = new ControladorBuscarNotas(alumno);
                         alumno.setVisible(true);
+                        cona.MostrarAlumno();
                         break;
                     }
                     default -> {

@@ -8,12 +8,12 @@ import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 public class MetodoNotas {
-    
+
     Colegio cole = new Colegio();
     Conexion conectar = new Conexion();
     Connection con;
     PreparedStatement ps;
-    ResultSet rs;
+    ResultSet rs = null;
     DefaultTableModel modelo = new DefaultTableModel();
     Colegio vista = new Colegio();
 
@@ -41,38 +41,29 @@ public class MetodoNotas {
         }
         return lista;
     }
-    
-    public List listarBusqueda() {
 
-        List<Notas> listas = new ArrayList();
-        String idalumno = vista.txtCodigoBuscarNota.getText();
-        String idcurso = vista.txtBuscaIdMateriaNotas.getText();
-        String where=" where 1=1";
-        if (!idalumno.isEmpty() ) {
-            where=where+" and idAlumno='"+idalumno+"' ";
-        }
-        if (!idalumno.isEmpty()) {
-            where=where+" and idCurso='"+idcurso+"' ";
-        }
-        
-        String sql = "SELECT * FROM edusena.notas "+where+"";
+    public boolean listarBusqueda(Notas N) {
+
+        String sql = "SELECT * FROM edusena.notas where idAlumno=?";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
+            ps.setInt(1, N.getIdAlumno());
             rs = ps.executeQuery();
-            while (rs.next() == true) {
-                Notas u = new Notas();
-                u.setNota1(rs.getDouble("nota1"));
-                u.setNota2(rs.getDouble("nota2"));
-                u.setNota3(rs.getDouble("nota3"));
-                u.setNota4(rs.getDouble("nota4"));
-                u.setPromedio(rs.getDouble("promedio"));
-                listas.add(u);
+            if (rs.next()) {
+                N.setNota1(Double.parseDouble(rs.getString("nota1")));
+                N.setNota2(Double.parseDouble(rs.getString("nota2")));
+                N.setNota3(Double.parseDouble(rs.getString("nota3")));
+                N.setNota4(Double.parseDouble(rs.getString("nota4")));
+                N.setPromedio(Double.parseDouble(rs.getString("promedio")));
+                return true;
             }
+            return false;
         } catch (SQLException e) {
             System.out.println("No hay acceso a la base de datos");
+            return false;
         }
-        return listas;
+       
     }
 
     public int agregar(Notas u) {

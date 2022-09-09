@@ -21,8 +21,7 @@ public class MetodoCurso {
             rs = ps.executeQuery();
             while(rs.next()){
                 Cursos u = new Cursos();
-                u.setId(rs.getInt("id"));
-                u.setCodigoCurso(rs.getString("codigoCurso"));
+                u.setId(rs.getInt("idCurso"));
                 u.setMateria(rs.getString("materia"));
                 u.setIdProfesor(rs.getString("idProfesor"));
                 lista.add(u);
@@ -34,13 +33,12 @@ public class MetodoCurso {
     
     public int agregarCurso(Cursos u){
         int r = 1;
-        String sql = "INSERT INTO edusena.cursos (codigoCurso, materia, idProfesor) VALUES(?,?,?)";
+        String sql = "INSERT INTO edusena.cursos (materia, idProfesor) VALUES(?,?)";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
-            ps.setString(1, u.getCodigoCurso());
-            ps.setString(2, u.getMateria());
-            ps.setString(3, u.getIdProfesor());
+            ps.setString(1, u.getMateria());
+            ps.setString(2, u.getIdProfesor());
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -56,13 +54,12 @@ public class MetodoCurso {
     
     public int actualizarCu(Cursos u){
         int r = 1;
-        String sql = "UPDATE edusena.cursos SET materia=?, idProfesor=? WHERE codigoCurso=?";
+        String sql = "UPDATE edusena.cursos SET materia=?, WHERE idProfesor=?";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setString(1, u.getMateria());
             ps.setString(2, u.getIdProfesor());
-            ps.setString(3, u.getCodigoCurso());
             ps.executeUpdate();
             if(r == 1){
                 return 1;

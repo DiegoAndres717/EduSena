@@ -89,6 +89,26 @@ public class Colegio extends javax.swing.JFrame {
         jpnTablaNotaDocente = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         tblNotasDocente = new RSMaterialComponent.RSTableMetro();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        lblNombreAlumno3 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtNombreAlumno2 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno14 = new javax.swing.JLabel();
+        txtApellidoAlumno2 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno15 = new javax.swing.JLabel();
+        txtGeneroAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno16 = new javax.swing.JLabel();
+        txtEmailAlumno2 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno17 = new javax.swing.JLabel();
+        txtApellidoAlumno5 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno18 = new javax.swing.JLabel();
+        txtDireccionAlumno2 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno20 = new javax.swing.JLabel();
+        lblNombreAlumno21 = new javax.swing.JLabel();
+        txtApellidoAlumno6 = new RSMaterialComponent.RSTextFieldTwo();
+        txtFechaNacimientoAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
         jpnAlumno = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -97,15 +117,38 @@ public class Colegio extends javax.swing.JFrame {
         jpnNotasAlumnos = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         lblCodigoAlumno2 = new javax.swing.JLabel();
-        txtCodigoBuscarNota = new javax.swing.JTextField();
-        lblCodigoAlumno3 = new javax.swing.JLabel();
-        txtBuscaIdMateriaNotas = new javax.swing.JTextField();
+        txtNota1Estudiante = new javax.swing.JTextField();
         btnBuscarNotaAlumn = new newscomponents.RSButtonIcon_new();
+        txtCodigoBuscarNota1 = new javax.swing.JTextField();
+        nota3 = new javax.swing.JTextField();
+        txtNota2Estudiante = new javax.swing.JTextField();
+        Nota4 = new javax.swing.JTextField();
+        promed = new javax.swing.JTextField();
+        lblCodigoAlumno4 = new javax.swing.JLabel();
+        lblCodigoAlumno3 = new javax.swing.JLabel();
+        lblCodigoAlumno5 = new javax.swing.JLabel();
+        lblCodigoAlumno6 = new javax.swing.JLabel();
+        lblCodigoAlumno7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jpnAlumnos = new javax.swing.JTabbedPane();
-        jpnTablaNotasAlumnos = new javax.swing.JPanel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        tblNotasAlumnos = new RSMaterialComponent.RSTableMetro();
+        lblNombreAlumno2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtNombreAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno6 = new javax.swing.JLabel();
+        txtApellidoAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno7 = new javax.swing.JLabel();
+        txtGeneroAlumno = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno8 = new javax.swing.JLabel();
+        txtEmailAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno9 = new javax.swing.JLabel();
+        txtTelefonoAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno10 = new javax.swing.JLabel();
+        txtDireccionAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        txtGradoAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        lblNombreAlumno11 = new javax.swing.JLabel();
+        lblNombreAlumno12 = new javax.swing.JLabel();
+        lblNombreAlumno13 = new javax.swing.JLabel();
+        txtNidAlumno1 = new RSMaterialComponent.RSTextFieldTwo();
+        txtFechaNacimientoAlumno = new RSMaterialComponent.RSTextFieldTwo();
         jpnCursoPrincipalV = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -210,6 +253,7 @@ public class Colegio extends javax.swing.JFrame {
         btnCerrar = new RSMaterialComponent.RSButtonIconOne();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
         setName("EduSena"); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(0, 213, 225));
@@ -225,7 +269,7 @@ public class Colegio extends javax.swing.JFrame {
         LOGO1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(LOGO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 1015, -1));
 
-        tpanGeneral.setBackground(new java.awt.Color(255, 255, 255));
+        tpanGeneral.setBackground(new java.awt.Color(204, 255, 255));
         tpanGeneral.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
         tpanGeneral.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
@@ -240,7 +284,7 @@ public class Colegio extends javax.swing.JFrame {
         jPanel19.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 620, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Colegio (1).jpg"))); // NOI18N
-        jPanel19.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 570));
+        jPanel19.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 570));
 
         javax.swing.GroupLayout jpnBienvenidoLayout = new javax.swing.GroupLayout(jpnBienvenido);
         jpnBienvenido.setLayout(jpnBienvenidoLayout);
@@ -302,32 +346,26 @@ public class Colegio extends javax.swing.JFrame {
         txtPromedio.setPlaceholder("Promedio");
 
         txtNota1.setForeground(new java.awt.Color(153, 153, 255));
-        txtNota1.setText("Nota 1");
         txtNota1.setBorderColor(new java.awt.Color(0, 153, 153));
         txtNota1.setPlaceholder("Nota 1");
 
         txtNota2.setForeground(new java.awt.Color(153, 153, 255));
-        txtNota2.setText("Nota 2");
         txtNota2.setBorderColor(new java.awt.Color(0, 153, 153));
         txtNota2.setPlaceholder("Nota 1");
 
         txtNota3.setForeground(new java.awt.Color(153, 153, 255));
-        txtNota3.setText("Nota 3");
         txtNota3.setBorderColor(new java.awt.Color(0, 153, 153));
         txtNota3.setPlaceholder("Nota 1");
 
         txtNota4.setForeground(new java.awt.Color(153, 153, 255));
-        txtNota4.setText("Nota 4");
         txtNota4.setBorderColor(new java.awt.Color(0, 153, 153));
         txtNota4.setPlaceholder("Nota 1");
 
         txtCodidoNotaDoc.setForeground(new java.awt.Color(153, 153, 255));
-        txtCodidoNotaDoc.setText("Código del Curso");
         txtCodidoNotaDoc.setBorderColor(new java.awt.Color(0, 153, 153));
         txtCodidoNotaDoc.setPlaceholder("Código del Curso");
 
         txtCodigoAlumnNotaDoc.setForeground(new java.awt.Color(153, 153, 255));
-        txtCodigoAlumnNotaDoc.setText("Código del Alumno");
         txtCodigoAlumnNotaDoc.setBorderColor(new java.awt.Color(0, 153, 153));
         txtCodigoAlumnNotaDoc.setPlaceholder("Código del Alumno");
 
@@ -450,11 +488,14 @@ public class Colegio extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        tpanDocentes.setBackground(new java.awt.Color(204, 255, 255));
         tpanDocentes.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 tpanDocentesStateChanged(evt);
             }
         });
+
+        jpnTablaNotaDocente.setBackground(new java.awt.Color(204, 255, 255));
 
         tblNotasDocente.setForeground(new java.awt.Color(51, 51, 51));
         tblNotasDocente.setModel(new javax.swing.table.DefaultTableModel(
@@ -474,17 +515,167 @@ public class Colegio extends javax.swing.JFrame {
         jpnTablaNotaDocenteLayout.setHorizontalGroup(
             jpnTablaNotaDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnTablaNotaDocenteLayout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jpnTablaNotaDocenteLayout.setVerticalGroup(
             jpnTablaNotaDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnTablaNotaDocenteLayout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         tpanDocentes.addTab("Notas", jpnTablaNotaDocente);
+
+        jPanel7.setBackground(new java.awt.Color(204, 255, 255));
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
+        jPanel8.setLayout(null);
+
+        lblNombreAlumno3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno3.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno3.setText("Nombres");
+        jPanel8.add(lblNombreAlumno3);
+        lblNombreAlumno3.setBounds(36, 102, 79, 17);
+
+        jLabel11.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 111, 152));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Información Personal Docente");
+        jPanel8.add(jLabel11);
+        jLabel11.setBounds(1, 42, 637, 22);
+
+        txtNombreAlumno2.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombreAlumno2.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtNombreAlumno2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtNombreAlumno2.setPlaceholder("");
+        jPanel8.add(txtNombreAlumno2);
+        txtNombreAlumno2.setBounds(36, 116, 250, 30);
+
+        lblNombreAlumno14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno14.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno14.setText("Apellidos");
+        jPanel8.add(lblNombreAlumno14);
+        lblNombreAlumno14.setBounds(36, 262, 79, 17);
+
+        txtApellidoAlumno2.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoAlumno2.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtApellidoAlumno2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtApellidoAlumno2.setPlaceholder("");
+        jPanel8.add(txtApellidoAlumno2);
+        txtApellidoAlumno2.setBounds(36, 199, 250, 30);
+
+        lblNombreAlumno15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno15.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno15.setText("Apellidos");
+        jPanel8.add(lblNombreAlumno15);
+        lblNombreAlumno15.setBounds(36, 176, 79, 17);
+
+        txtGeneroAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtGeneroAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtGeneroAlumno1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtGeneroAlumno1.setPlaceholder("");
+        jPanel8.add(txtGeneroAlumno1);
+        txtGeneroAlumno1.setBounds(350, 360, 250, 30);
+
+        lblNombreAlumno16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno16.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno16.setText("Correo");
+        jPanel8.add(lblNombreAlumno16);
+        lblNombreAlumno16.setBounds(355, 102, 79, 17);
+
+        txtEmailAlumno2.setForeground(new java.awt.Color(0, 0, 0));
+        txtEmailAlumno2.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtEmailAlumno2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtEmailAlumno2.setPlaceholder("");
+        jPanel8.add(txtEmailAlumno2);
+        txtEmailAlumno2.setBounds(355, 125, 250, 28);
+
+        lblNombreAlumno17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno17.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno17.setText("Telefono");
+        jPanel8.add(lblNombreAlumno17);
+        lblNombreAlumno17.setBounds(355, 171, 79, 17);
+
+        txtApellidoAlumno5.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoAlumno5.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtApellidoAlumno5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtApellidoAlumno5.setPlaceholder("");
+        jPanel8.add(txtApellidoAlumno5);
+        txtApellidoAlumno5.setBounds(355, 194, 250, 30);
+
+        lblNombreAlumno18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno18.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno18.setText("Dirección");
+        jPanel8.add(lblNombreAlumno18);
+        lblNombreAlumno18.setBounds(355, 257, 79, 17);
+
+        txtDireccionAlumno2.setForeground(new java.awt.Color(0, 0, 0));
+        txtDireccionAlumno2.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtDireccionAlumno2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtDireccionAlumno2.setPlaceholder("");
+        jPanel8.add(txtDireccionAlumno2);
+        txtDireccionAlumno2.setBounds(355, 280, 250, 30);
+
+        lblNombreAlumno20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno20.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno20.setText("Fecha de Nacimiento");
+        jPanel8.add(lblNombreAlumno20);
+        lblNombreAlumno20.setBounds(36, 335, 164, 17);
+
+        lblNombreAlumno21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno21.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno21.setText("Genero");
+        jPanel8.add(lblNombreAlumno21);
+        lblNombreAlumno21.setBounds(350, 330, 79, 17);
+
+        txtApellidoAlumno6.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoAlumno6.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtApellidoAlumno6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtApellidoAlumno6.setPlaceholder("");
+        jPanel8.add(txtApellidoAlumno6);
+        txtApellidoAlumno6.setBounds(36, 280, 250, 30);
+
+        txtFechaNacimientoAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtFechaNacimientoAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtFechaNacimientoAlumno1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtFechaNacimientoAlumno1.setPlaceholder("");
+        jPanel8.add(txtFechaNacimientoAlumno1);
+        txtFechaNacimientoAlumno1.setBounds(40, 360, 250, 30);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tpanDocentes.addTab("Información Personal", jPanel5);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -520,7 +711,7 @@ public class Colegio extends javax.swing.JFrame {
 
         tpanGeneral.addTab("Docentes", jpnDocente);
 
-        jpnAlumno.setBackground(new java.awt.Color(255, 255, 255));
+        jpnAlumno.setBackground(new java.awt.Color(204, 255, 255));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -548,67 +739,81 @@ public class Colegio extends javax.swing.JFrame {
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
 
         tpanAlumno1.setForeground(new java.awt.Color(0, 116, 208));
 
         jpnNotasAlumnos.setBackground(new java.awt.Color(255, 255, 255));
         jpnNotasAlumnos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpnNotasAlumnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Roboto Black", 2, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 111, 152));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Mis notas");
+        jpnNotasAlumnos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 320, -1));
 
+        lblCodigoAlumno2.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
         lblCodigoAlumno2.setForeground(new java.awt.Color(0, 116, 208));
-        lblCodigoAlumno2.setText("Codigo");
+        lblCodigoAlumno2.setText("Nota 1");
+        jpnNotasAlumnos.add(lblCodigoAlumno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 50, -1));
 
-        lblCodigoAlumno3.setForeground(new java.awt.Color(0, 116, 208));
-        lblCodigoAlumno3.setText("Codigo del curso");
+        txtNota1Estudiante.setBackground(new java.awt.Color(204, 255, 255));
+        txtNota1Estudiante.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        txtNota1Estudiante.setEnabled(false);
+        jpnNotasAlumnos.add(txtNota1Estudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 60, 25));
 
         btnBuscarNotaAlumn.setBackground(new java.awt.Color(15, 248, 226));
         btnBuscarNotaAlumn.setText("Buscar");
         btnBuscarNotaAlumn.setBackgroundHover(new java.awt.Color(0, 204, 204));
         btnBuscarNotaAlumn.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SEARCH);
+        jpnNotasAlumnos.add(btnBuscarNotaAlumn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 101, 30));
+        jpnNotasAlumnos.add(txtCodigoBuscarNota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 127, 29));
 
-        javax.swing.GroupLayout jpnNotasAlumnosLayout = new javax.swing.GroupLayout(jpnNotasAlumnos);
-        jpnNotasAlumnos.setLayout(jpnNotasAlumnosLayout);
-        jpnNotasAlumnosLayout.setHorizontalGroup(
-            jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnNotasAlumnosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
-            .addGroup(jpnNotasAlumnosLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnBuscarNotaAlumn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jpnNotasAlumnosLayout.createSequentialGroup()
-                        .addGroup(jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCodigoAlumno2)
-                            .addComponent(txtCodigoBuscarNota, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCodigoAlumno3)
-                            .addComponent(txtBuscaIdMateriaNotas, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
-        jpnNotasAlumnosLayout.setVerticalGroup(
-            jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnNotasAlumnosLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jLabel7)
-                .addGap(27, 27, 27)
-                .addGroup(jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCodigoAlumno2)
-                    .addComponent(lblCodigoAlumno3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpnNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoBuscarNota, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtBuscaIdMateriaNotas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(btnBuscarNotaAlumn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
+        nota3.setBackground(new java.awt.Color(204, 255, 255));
+        nota3.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        nota3.setEnabled(false);
+        jpnNotasAlumnos.add(nota3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 60, 25));
+
+        txtNota2Estudiante.setBackground(new java.awt.Color(204, 255, 255));
+        txtNota2Estudiante.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        txtNota2Estudiante.setEnabled(false);
+        jpnNotasAlumnos.add(txtNota2Estudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 60, 25));
+
+        Nota4.setBackground(new java.awt.Color(204, 255, 255));
+        Nota4.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        Nota4.setEnabled(false);
+        jpnNotasAlumnos.add(Nota4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 60, 25));
+
+        promed.setBackground(new java.awt.Color(204, 204, 255));
+        promed.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        promed.setEnabled(false);
+        jpnNotasAlumnos.add(promed, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 70, 25));
+
+        lblCodigoAlumno4.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        lblCodigoAlumno4.setForeground(new java.awt.Color(0, 116, 208));
+        lblCodigoAlumno4.setText("Codigo");
+        jpnNotasAlumnos.add(lblCodigoAlumno4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
+
+        lblCodigoAlumno3.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        lblCodigoAlumno3.setForeground(new java.awt.Color(0, 116, 208));
+        lblCodigoAlumno3.setText("Nota 2");
+        jpnNotasAlumnos.add(lblCodigoAlumno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 50, -1));
+
+        lblCodigoAlumno5.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        lblCodigoAlumno5.setForeground(new java.awt.Color(0, 116, 208));
+        lblCodigoAlumno5.setText("Promedio");
+        jpnNotasAlumnos.add(lblCodigoAlumno5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 80, 20));
+
+        lblCodigoAlumno6.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        lblCodigoAlumno6.setForeground(new java.awt.Color(0, 116, 208));
+        lblCodigoAlumno6.setText("Nota 3");
+        jpnNotasAlumnos.add(lblCodigoAlumno6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 50, -1));
+
+        lblCodigoAlumno7.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
+        lblCodigoAlumno7.setForeground(new java.awt.Color(0, 116, 208));
+        lblCodigoAlumno7.setText("Nota 4");
+        jpnNotasAlumnos.add(lblCodigoAlumno7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 287, 50, 20));
 
         tpanAlumno1.addTab("Notas", jpnNotasAlumnos);
 
@@ -616,65 +821,149 @@ public class Colegio extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpanAlumno1)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(tpanAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 21, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(tpanAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tpanAlumno1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 153, 153)));
+        jPanel3.setLayout(null);
 
-        jpnAlumnos.setForeground(new java.awt.Color(0, 116, 208));
-        jpnAlumnos.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jpnAlumnosStateChanged(evt);
+        lblNombreAlumno2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno2.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno2.setText("Nombres");
+        jPanel3.add(lblNombreAlumno2);
+        lblNombreAlumno2.setBounds(36, 102, 79, 17);
+
+        jLabel10.setFont(new java.awt.Font("Roboto Black", 2, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 111, 152));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Información Personal");
+        jPanel3.add(jLabel10);
+        jLabel10.setBounds(1, 42, 637, 22);
+
+        txtNombreAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombreAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtNombreAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtNombreAlumno1.setPlaceholder("");
+        jPanel3.add(txtNombreAlumno1);
+        txtNombreAlumno1.setBounds(36, 116, 250, 30);
+
+        lblNombreAlumno6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno6.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno6.setText("Nid");
+        jPanel3.add(lblNombreAlumno6);
+        lblNombreAlumno6.setBounds(36, 262, 79, 17);
+
+        txtApellidoAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtApellidoAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtApellidoAlumno1.setPlaceholder("");
+        jPanel3.add(txtApellidoAlumno1);
+        txtApellidoAlumno1.setBounds(36, 199, 250, 30);
+
+        lblNombreAlumno7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno7.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno7.setText("Apellidos");
+        jPanel3.add(lblNombreAlumno7);
+        lblNombreAlumno7.setBounds(36, 176, 79, 17);
+
+        txtGeneroAlumno.setForeground(new java.awt.Color(0, 0, 0));
+        txtGeneroAlumno.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtGeneroAlumno.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtGeneroAlumno.setPlaceholder("");
+        jPanel3.add(txtGeneroAlumno);
+        txtGeneroAlumno.setBounds(360, 430, 250, 30);
+
+        lblNombreAlumno8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno8.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno8.setText("Correo");
+        jPanel3.add(lblNombreAlumno8);
+        lblNombreAlumno8.setBounds(355, 102, 79, 17);
+
+        txtEmailAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtEmailAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtEmailAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtEmailAlumno1.setPlaceholder("");
+        jPanel3.add(txtEmailAlumno1);
+        txtEmailAlumno1.setBounds(355, 125, 250, 28);
+
+        lblNombreAlumno9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno9.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno9.setText("Telefono");
+        jPanel3.add(lblNombreAlumno9);
+        lblNombreAlumno9.setBounds(355, 171, 79, 17);
+
+        txtTelefonoAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtTelefonoAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtTelefonoAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtTelefonoAlumno1.setPlaceholder("");
+        jPanel3.add(txtTelefonoAlumno1);
+        txtTelefonoAlumno1.setBounds(355, 194, 250, 30);
+
+        lblNombreAlumno10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno10.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno10.setText("Dirección");
+        jPanel3.add(lblNombreAlumno10);
+        lblNombreAlumno10.setBounds(355, 257, 79, 17);
+
+        txtDireccionAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtDireccionAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtDireccionAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtDireccionAlumno1.setPlaceholder("");
+        jPanel3.add(txtDireccionAlumno1);
+        txtDireccionAlumno1.setBounds(355, 280, 250, 30);
+
+        txtGradoAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtGradoAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtGradoAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtGradoAlumno1.setPlaceholder("");
+        txtGradoAlumno1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtGradoAlumno1ActionPerformed(evt);
             }
         });
+        jPanel3.add(txtGradoAlumno1);
+        txtGradoAlumno1.setBounds(355, 351, 250, 30);
 
-        jpnTablaNotasAlumnos.setBackground(new java.awt.Color(255, 255, 255));
+        lblNombreAlumno11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno11.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno11.setText("Grado");
+        jPanel3.add(lblNombreAlumno11);
+        lblNombreAlumno11.setBounds(355, 328, 79, 17);
 
-        tblNotasAlumnos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        lblNombreAlumno12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno12.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno12.setText("Fecha de Nacimiento");
+        jPanel3.add(lblNombreAlumno12);
+        lblNombreAlumno12.setBounds(36, 335, 164, 17);
 
-            },
-            new String [] {
-                "Nota 1", "Nota 2", "Nota 3", "Nota 4", "Promedio"
-            }
-        ));
-        tblNotasAlumnos.setBackgoundHead(new java.awt.Color(0, 204, 204));
-        tblNotasAlumnos.setBackgoundHover(new java.awt.Color(0, 153, 153));
-        tblNotasAlumnos.setColorPrimaryText(new java.awt.Color(0, 51, 255));
-        tblNotasAlumnos.setColorSecundaryText(new java.awt.Color(0, 0, 255));
-        jScrollPane8.setViewportView(tblNotasAlumnos);
+        lblNombreAlumno13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblNombreAlumno13.setForeground(new java.awt.Color(0, 116, 208));
+        lblNombreAlumno13.setText("Genero");
+        jPanel3.add(lblNombreAlumno13);
+        lblNombreAlumno13.setBounds(360, 400, 79, 17);
 
-        javax.swing.GroupLayout jpnTablaNotasAlumnosLayout = new javax.swing.GroupLayout(jpnTablaNotasAlumnos);
-        jpnTablaNotasAlumnos.setLayout(jpnTablaNotasAlumnosLayout);
-        jpnTablaNotasAlumnosLayout.setHorizontalGroup(
-            jpnTablaNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
-        );
-        jpnTablaNotasAlumnosLayout.setVerticalGroup(
-            jpnTablaNotasAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnTablaNotasAlumnosLayout.createSequentialGroup()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        txtNidAlumno1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNidAlumno1.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtNidAlumno1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtNidAlumno1.setPlaceholder("");
+        jPanel3.add(txtNidAlumno1);
+        txtNidAlumno1.setBounds(36, 280, 250, 30);
 
-        jpnAlumnos.addTab("Notas", jpnTablaNotasAlumnos);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnAlumnos)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnAlumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-        );
+        txtFechaNacimientoAlumno.setForeground(new java.awt.Color(0, 0, 0));
+        txtFechaNacimientoAlumno.setBorderColor(new java.awt.Color(0, 116, 208));
+        txtFechaNacimientoAlumno.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        txtFechaNacimientoAlumno.setPlaceholder("");
+        jPanel3.add(txtFechaNacimientoAlumno);
+        txtFechaNacimientoAlumno.setBounds(40, 360, 250, 30);
 
         javax.swing.GroupLayout jpnAlumnoLayout = new javax.swing.GroupLayout(jpnAlumno);
         jpnAlumno.setLayout(jpnAlumnoLayout);
@@ -683,18 +972,22 @@ public class Colegio extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jpnAlumnoLayout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jpnAlumnoLayout.setVerticalGroup(
             jpnAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnAlumnoLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpnAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(jpnAlumnoLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnAlumnoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))))
         );
 
         tpanGeneral.addTab("Alumnos", jpnAlumno);
@@ -950,7 +1243,7 @@ public class Colegio extends javax.swing.JFrame {
                     .addComponent(btnActualizarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSeleccionarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBorrarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         tpanRectoria.addTab("Cursos", jpnCursoTodos);
@@ -1204,14 +1497,14 @@ public class Colegio extends javax.swing.JFrame {
                 .addGroup(jpnInfoAlumnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFehcaNacAlumno)
                     .addComponent(DateAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addComponent(btnAgregarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpnInfoAlumnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSeleccionarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnActualizaAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBorrarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         tpanRectoria.addTab("Alumnos", jpnInfoAlumn);
@@ -1219,8 +1512,9 @@ public class Colegio extends javax.swing.JFrame {
         jpnCursoTodos1.setBackground(new java.awt.Color(255, 255, 255));
         jpnCursoTodos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel13.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 111, 152));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Usuarios");
 
         lblUsuario.setForeground(new java.awt.Color(0, 116, 208));
@@ -1232,7 +1526,7 @@ public class Colegio extends javax.swing.JFrame {
         lblCodigoAlumno23.setText("Rol");
 
         lblCodigoAlumno28.setForeground(new java.awt.Color(0, 116, 208));
-        lblCodigoAlumno28.setText("Id Profesor");
+        lblCodigoAlumno28.setText("Contraseña");
 
         lblCodigoAlumno29.setForeground(new java.awt.Color(0, 116, 208));
         lblCodigoAlumno29.setText("Activo");
@@ -1258,10 +1552,6 @@ public class Colegio extends javax.swing.JFrame {
         jpnCursoTodos1.setLayout(jpnCursoTodos1Layout);
         jpnCursoTodos1Layout.setHorizontalGroup(
             jpnCursoTodos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnCursoTodos1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(151, 151, 151))
             .addGroup(jpnCursoTodos1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(jpnCursoTodos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1291,6 +1581,7 @@ public class Colegio extends javax.swing.JFrame {
                                     .addComponent(lblCodigoAlumno29, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtActivo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(139, 139, 139))))))
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpnCursoTodos1Layout.setVerticalGroup(
             jpnCursoTodos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1358,11 +1649,11 @@ public class Colegio extends javax.swing.JFrame {
         jpnPrincipalCursos.setLayout(jpnPrincipalCursosLayout);
         jpnPrincipalCursosLayout.setHorizontalGroup(
             jpnPrincipalCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         jpnPrincipalCursosLayout.setVerticalGroup(
             jpnPrincipalCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
         );
 
         jpnRectoria.addTab("Cursos", jpnPrincipalCursos);
@@ -1383,11 +1674,11 @@ public class Colegio extends javax.swing.JFrame {
         jpnTablaDocente.setLayout(jpnTablaDocenteLayout);
         jpnTablaDocenteLayout.setHorizontalGroup(
             jpnTablaDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         jpnTablaDocenteLayout.setVerticalGroup(
             jpnTablaDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
         );
 
         jpnRectoria.addTab("Docente", jpnTablaDocente);
@@ -1402,17 +1693,18 @@ public class Colegio extends javax.swing.JFrame {
         ));
         tblAlumnos.setBackgoundHead(new java.awt.Color(0, 204, 204));
         tblAlumnos.setBackgoundHover(new java.awt.Color(0, 153, 153));
+        tblAlumnos.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(tblAlumnos);
 
         javax.swing.GroupLayout jpnTablaAlumnosLayout = new javax.swing.GroupLayout(jpnTablaAlumnos);
         jpnTablaAlumnos.setLayout(jpnTablaAlumnosLayout);
         jpnTablaAlumnosLayout.setHorizontalGroup(
             jpnTablaAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         jpnTablaAlumnosLayout.setVerticalGroup(
             jpnTablaAlumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
         );
 
         jpnRectoria.addTab("Alumnos", jpnTablaAlumnos);
@@ -1433,12 +1725,12 @@ public class Colegio extends javax.swing.JFrame {
         jpnTablaUsuarios.setLayout(jpnTablaUsuariosLayout);
         jpnTablaUsuariosLayout.setHorizontalGroup(
             jpnTablaUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         jpnTablaUsuariosLayout.setVerticalGroup(
             jpnTablaUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnTablaUsuariosLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1551,8 +1843,8 @@ public class Colegio extends javax.swing.JFrame {
                         .addComponent(btnAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnRectoria, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tpanGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tpanGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1569,16 +1861,6 @@ public class Colegio extends javax.swing.JFrame {
             tpanDocente1.setSelectedIndex(1);
         }
     }//GEN-LAST:event_tpanDocentesStateChanged
-
-    private void jpnAlumnosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jpnAlumnosStateChanged
-        if (jpnAlumnos.getSelectedIndex() == 0) {
-            if (tpanAlumno1.getSelectedIndex() > 0) {
-                tpanAlumno1.setSelectedIndex(0);
-            }
-        } else {
-            tpanAlumno1.setSelectedIndex(1);
-        }
-    }//GEN-LAST:event_jpnAlumnosStateChanged
 
     private void txtCursoRectoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCursoRectoMouseEntered
         btnCursosRecto.setBackground(new Color(122, 236, 218));
@@ -1676,6 +1958,10 @@ public class Colegio extends javax.swing.JFrame {
         float promedio = (float) ((nota1 + nota2 + nota3 + nota4) / 4);
         txtPromedio.setText(String.valueOf(promedio));
     }//GEN-LAST:event_btnSelecionarNotaDoc2ActionPerformed
+
+    private void txtGradoAlumno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGradoAlumno1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtGradoAlumno1ActionPerformed
     
 
     // </editor-fold> 
@@ -1727,6 +2013,7 @@ public class Colegio extends javax.swing.JFrame {
     public com.toedter.calendar.JDateChooser DateAlumno;
     public com.toedter.calendar.JDateChooser DateDocente;
     private javax.swing.JLabel LOGO1;
+    public javax.swing.JTextField Nota4;
     public newscomponents.RSButtonIcon_new btnActualizaAlumno;
     public newscomponents.RSButtonIcon_new btnActualizarCurso;
     public newscomponents.RSButtonIcon_new btnActualizarDocente;
@@ -1762,6 +2049,8 @@ public class Colegio extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> cbxGeneroAlumno;
     public javax.swing.JComboBox<String> cbxRolUsuario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
@@ -1781,16 +2070,17 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JPanel jpnAlumno;
-    private javax.swing.JTabbedPane jpnAlumnos;
     private javax.swing.JPanel jpnBienvenido;
     private javax.swing.JPanel jpnCursoPrincipalV;
     private javax.swing.JPanel jpnCursoTodos;
@@ -1805,7 +2095,6 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JPanel jpnTablaAlumnos;
     private javax.swing.JPanel jpnTablaDocente;
     private javax.swing.JPanel jpnTablaNotaDocente;
-    private javax.swing.JPanel jpnTablaNotasAlumnos;
     private javax.swing.JPanel jpnTablaUsuarios;
     private javax.swing.JLabel lblApellidoAlumno;
     private javax.swing.JLabel lblApellidoAlumno1;
@@ -1819,6 +2108,10 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JLabel lblCodigoAlumno28;
     private javax.swing.JLabel lblCodigoAlumno29;
     private javax.swing.JLabel lblCodigoAlumno3;
+    private javax.swing.JLabel lblCodigoAlumno4;
+    private javax.swing.JLabel lblCodigoAlumno5;
+    private javax.swing.JLabel lblCodigoAlumno6;
+    private javax.swing.JLabel lblCodigoAlumno7;
     private javax.swing.JLabel lblFehcaNacAlumno;
     private javax.swing.JLabel lblFehcaNacAlumno2;
     private javax.swing.JLabel lblGeneroAlumno;
@@ -1830,14 +2123,32 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JLabel lblNidAlumno7;
     private javax.swing.JLabel lblNombreAlumno;
     private javax.swing.JLabel lblNombreAlumno1;
+    private javax.swing.JLabel lblNombreAlumno10;
+    private javax.swing.JLabel lblNombreAlumno11;
+    private javax.swing.JLabel lblNombreAlumno12;
+    private javax.swing.JLabel lblNombreAlumno13;
+    private javax.swing.JLabel lblNombreAlumno14;
+    private javax.swing.JLabel lblNombreAlumno15;
+    private javax.swing.JLabel lblNombreAlumno16;
+    private javax.swing.JLabel lblNombreAlumno17;
+    private javax.swing.JLabel lblNombreAlumno18;
+    private javax.swing.JLabel lblNombreAlumno2;
+    private javax.swing.JLabel lblNombreAlumno20;
+    private javax.swing.JLabel lblNombreAlumno21;
+    private javax.swing.JLabel lblNombreAlumno3;
     private javax.swing.JLabel lblNombreAlumno4;
     private javax.swing.JLabel lblNombreAlumno5;
+    private javax.swing.JLabel lblNombreAlumno6;
+    private javax.swing.JLabel lblNombreAlumno7;
+    private javax.swing.JLabel lblNombreAlumno8;
+    private javax.swing.JLabel lblNombreAlumno9;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblmateria;
+    public javax.swing.JTextField nota3;
+    public javax.swing.JTextField promed;
     public RSMaterialComponent.RSTableMetro tblAlumnos;
     public RSMaterialComponent.RSTableMetro tblCursos;
     public RSMaterialComponent.RSTableMetro tblDocente;
-    public RSMaterialComponent.RSTableMetro tblNotasAlumnos;
     public RSMaterialComponent.RSTableMetro tblNotasDocente;
     public RSMaterialComponent.RSTableMetro tblUsuarios;
     private javax.swing.JTabbedPane tpanAlumno1;
@@ -1847,27 +2158,44 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JTabbedPane tpanRectoria;
     public javax.swing.JTextField txtActivo;
     public javax.swing.JTextField txtApellidoAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtApellidoAlumno1;
+    private RSMaterialComponent.RSTextFieldTwo txtApellidoAlumno2;
+    private RSMaterialComponent.RSTextFieldTwo txtApellidoAlumno5;
+    private RSMaterialComponent.RSTextFieldTwo txtApellidoAlumno6;
     public javax.swing.JTextField txtApellidoDocente;
-    public javax.swing.JTextField txtBuscaIdMateriaNotas;
     private javax.swing.JTextField txtBuscarDocente;
     public RSMaterialComponent.RSTextFieldTwo txtCodidoNotaDoc;
     public RSMaterialComponent.RSTextFieldTwo txtCodigoAlumnNotaDoc;
-    public javax.swing.JTextField txtCodigoBuscarNota;
+    public javax.swing.JTextField txtCodigoBuscarNota1;
     public javax.swing.JTextField txtCodigoCurso;
     public javax.swing.JPasswordField txtContraseñaUsuario;
     private javax.swing.JLabel txtCursoRecto;
     public javax.swing.JTextField txtCursoidProfesor;
+    public RSMaterialComponent.RSTextFieldTwo txtDireccionAlumno1;
+    private RSMaterialComponent.RSTextFieldTwo txtDireccionAlumno2;
     public javax.swing.JTextField txtDireccionDocente;
     public javax.swing.JTextField txtDirecciondAlumno;
     public javax.swing.JTextField txtEmailAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtEmailAlumno1;
+    private RSMaterialComponent.RSTextFieldTwo txtEmailAlumno2;
     public javax.swing.JTextField txtEmailDocente;
+    public RSMaterialComponent.RSTextFieldTwo txtFechaNacimientoAlumno;
+    private RSMaterialComponent.RSTextFieldTwo txtFechaNacimientoAlumno1;
+    public RSMaterialComponent.RSTextFieldTwo txtGeneroAlumno;
+    private RSMaterialComponent.RSTextFieldTwo txtGeneroAlumno1;
     public javax.swing.JTextField txtGradoAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtGradoAlumno1;
     public javax.swing.JTextField txtNidAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtNidAlumno1;
     public javax.swing.JTextField txtNidDocente;
     public javax.swing.JTextField txtNombreAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtNombreAlumno1;
+    private RSMaterialComponent.RSTextFieldTwo txtNombreAlumno2;
     public javax.swing.JTextField txtNombreDocente;
     public RSMaterialComponent.RSTextFieldOne txtNota1;
+    public javax.swing.JTextField txtNota1Estudiante;
     public RSMaterialComponent.RSTextFieldOne txtNota2;
+    public javax.swing.JTextField txtNota2Estudiante;
     public RSMaterialComponent.RSTextFieldOne txtNota3;
     public RSMaterialComponent.RSTextFieldOne txtNota4;
     public RSMaterialComponent.RSTextFieldOne txtPromedio;
@@ -1875,6 +2203,7 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JLabel txtRectorDocente;
     private javax.swing.JLabel txtRectorUsuario;
     public javax.swing.JTextField txtTelefonoAlumno;
+    public RSMaterialComponent.RSTextFieldTwo txtTelefonoAlumno1;
     public javax.swing.JTextField txtTelefonoDocente;
     public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
