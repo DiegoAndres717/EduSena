@@ -21,8 +21,7 @@ public class MetodoUsuario {
             rs = ps.executeQuery();
             while(rs.next()){
                 Usuario u = new Usuario();
-                u.setId(rs.getInt("id"));
-                u.setUsuario(rs.getString("usuario"));
+                u.setId(rs.getInt("idCodigo"));
                 u.setContraseña(rs.getString("contraseña"));
                 u.setRol(rs.getString("rol"));
                 u.setActivo(rs.getString("activo"));
@@ -35,14 +34,14 @@ public class MetodoUsuario {
     
     public int agregarUsu(Usuario u){
         int r = 1;
-        String sql = "INSERT INTO edusena.usuarios (usuario, contraseña, rol, activo) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO edusena.usuarios (contraseña, rol, activo) VALUES(?,?,?)";
         try {
             con = usuarioco.getConnecion();
             ps = con.prepareStatement(sql);
-            ps.setString(1, u.getUsuario());
-            ps.setString(2, u.getContraseña());
-            ps.setString(3, u.getRol());
-            ps.setString(4, u.getActivo());
+            //ps.setString(1,Integer.toString(u.getId()));
+            ps.setString(1, u.getContraseña());
+            ps.setString(2, u.getRol());
+            ps.setString(3, u.getActivo());
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -58,14 +57,14 @@ public class MetodoUsuario {
     
     public int actualizarUsuarios(Usuario u){
         int r = 1;
-        String sql = "UPDATE edusena.usuarios SET contraseña=?, rol=?, activo=? WHERE usuario=?";
+        String sql = "UPDATE edusena.usuarios SET contraseña=?, rol=?, activo=? WHERE idCodigo=?";
         try {
             con = usuarioco.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setString(1, u.getContraseña());
             ps.setString(2, u.getRol());
             ps.setString(3, u.getActivo());
-            ps.setString(4, (u.getUsuario()));
+            ps.setString(4, Integer.toString(u.getId()));
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -79,7 +78,7 @@ public class MetodoUsuario {
         return r;
     }
     public void eliminar(int doc){
-        String sql = "DELETE FROM edusena.notas WHERE id="+doc;
+        String sql = "DELETE FROM edusena.usuarios WHERE idCodigo="+doc;
         try {
             con = usuarioco.getConnecion();
             ps = con.prepareStatement(sql);

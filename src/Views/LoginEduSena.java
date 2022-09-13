@@ -2,6 +2,7 @@ package Views;
 
 import Conexion.Conexion;
 import Models.MetodoAlumno;
+import Models.MetodoDocente;
 import Models.Persona;
 import ViewModels.ControladorAlumno;
 import ViewModels.ControladorBuscarNotas;
@@ -275,8 +276,8 @@ public class LoginEduSena extends javax.swing.JFrame {
         String user = txtUsuario.getText();
         String pass = new String(txtPassword.getPassword());
         String roll = (String) cbxRoles.getSelectedItem();
-        String sql = "SELECT usuario, contraseña, rol FROM "
-                + "usuarios WHERE usuario='" + user + "' AND contraseña='" + pass + "' AND rol='" + roll + "' AND activo = 1";
+        String sql = "SELECT idCodigo, contraseña, rol FROM "
+                + "usuarios WHERE idCodigo='" + user + "' AND contraseña='" + pass + "' AND rol='" + roll + "' AND activo = 1";
         Conexion conectar = new Conexion();
         Connection con;
         PreparedStatement ps;
@@ -288,7 +289,7 @@ public class LoginEduSena extends javax.swing.JFrame {
 
             if (rs.next()) {
                 // si existe el usuario
-                String us = rs.getString("usuario");
+                String us = rs.getString("idCodigo");
                 String pa = rs.getString("contraseña");
                 String ro = rs.getString("rol");
                 int x = 0;
@@ -301,7 +302,7 @@ public class LoginEduSena extends javax.swing.JFrame {
                 }
                 if (pass.equals(pa) && user.equals(us) && roll.equals("Estudiante")) {
                     x = 3;
-                    
+
                 }
                 switch (x) {
                     case 1 -> {
@@ -326,7 +327,23 @@ public class LoginEduSena extends javax.swing.JFrame {
                         ControladorAlumno cona = new ControladorAlumno(docente);
                         ControladorNotas N = new ControladorNotas(docente);
                         ControladorCursos C = new ControladorCursos(docente);
-                        ControladorUsuario uss = new ControladorUsuario(docente);
+                        
+                        Persona use = new Persona();
+                        MetodoDocente dao = new MetodoDocente();
+                        use.setCodigo(Integer.parseInt(txtUsuario.getText()));
+                        
+                        if (dao.UsuarioIngresadoD(use)) {
+                            docente.txtNombreAlumno2.setText((use.getNombres()));
+                            docente.txtApellidoAlumno2.setText((use.getApellidos()));
+                            docente.txtNidAlumno2.setText((use.getNid()));
+                            docente.txtEmailAlumno2.setText((use.getEmail()));
+                            docente.txtTelefonoAlumno2.setText(String.valueOf(use.getTelefono()));
+                            docente.txtDireccionAlumno2.setText((use.getDireccion()));
+                            docente.txtGeneroAlumno1.setText((use.getGenero()));
+                            docente.txtFechaNacimientoAlumno1.setText((use.getFecha_nacimiento()));
+                        } else {
+                            System.out.println("Há ocurrido un error");
+                        }
                         docente.setVisible(true);
                         break;
                     }
@@ -337,14 +354,27 @@ public class LoginEduSena extends javax.swing.JFrame {
                         Colegio.btnDocente.setVisible(false);
                         Colegio.btnRectoria.setVisible(false);
                         ControladorAlumno cona = new ControladorAlumno(alumno);
-                        ControladorDocente D = new ControladorDocente(alumno);
-                        MetodoAlumno ma = new MetodoAlumno();
                         ControladorNotas N = new ControladorNotas(alumno);
-                        ControladorCursos C = new ControladorCursos(alumno);
-                        ControladorUsuario uss = new ControladorUsuario(alumno);
                         ControladorBuscarNotas no = new ControladorBuscarNotas(alumno);
+
+                        Persona use = new Persona();
+                        MetodoAlumno dao = new MetodoAlumno();
+                        use.setCodigo(Integer.parseInt(txtUsuario.getText()));
+                        if (dao.UsuarioIngresado(use)) {
+                            alumno.txtNombreAlumno1.setText((use.getNombres()));
+                            alumno.txtApellidoAlumno1.setText((use.getApellidos()));
+                            alumno.txtNidAlumno1.setText((use.getNid()));
+                            alumno.txtEmailAlumno1.setText((use.getEmail()));
+                            alumno.txtTelefonoAlumno1.setText(String.valueOf(use.getTelefono()));
+                            alumno.txtDireccionAlumno1.setText((use.getDireccion()));
+                            alumno.txtGradoAlumno1.setText(String.valueOf(use.getGrado()));
+                            alumno.txtGeneroAlumno.setText((use.getGenero()));
+                            alumno.txtFechaNacimientoAlumno.setText((use.getFecha_nacimiento()));
+                        } else {
+                            System.out.println("Há ocurrido un error");
+                        }
+
                         alumno.setVisible(true);
-                        cona.MostrarAlumno();
                         break;
                     }
                     default -> {

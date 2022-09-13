@@ -35,7 +35,7 @@ public final class ControladorDocente implements ActionListener{
     public void listar(JTable tblDocentes){
         modelo = (DefaultTableModel) tblDocentes.getModel();
         List<Persona> listaUsuarios = dao.listar();
-        Object[] object = new Object[9];
+        Object[] object = new Object[10];
         for (int i = 0; i < listaUsuarios.size(); i++) {
             object[0] = listaUsuarios.get(i).getId();
             object[1] = listaUsuarios.get(i).getNombres();
@@ -46,6 +46,7 @@ public final class ControladorDocente implements ActionListener{
             object[6] = listaUsuarios.get(i).getDireccion();
             object[7] = listaUsuarios.get(i).getGenero();
             object[8] = listaUsuarios.get(i).getFecha_nacimiento();
+            object[9] = listaUsuarios.get(i).getCodigo();
             modelo.addRow(object);
         }
         vista.tblDocente.setModel(modelo);
@@ -61,6 +62,7 @@ public final class ControladorDocente implements ActionListener{
         String em = vista.txtEmailDocente.getText();
         String tel = (vista.txtTelefonoDocente.getText());
         String dir = vista.txtDireccionDocente.getText();
+        int cod = Integer.parseInt(vista.txtCodigoDocente.getText());
         String gen = vista.cbxGenero.getSelectedItem().toString();
         String fec = ((JTextField)vista.DateDocente.getDateEditor().getUiComponent()).getText();
         us.setNombres(nom);
@@ -70,10 +72,12 @@ public final class ControladorDocente implements ActionListener{
         us.setTelefono(tel);
         us.setDireccion(dir);
         us.setGenero(gen);
+        us.setCodigo(cod);
         us.setFecha_nacimiento(fec);
         int r = dao.agregar(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro exitoso!");
+            JOptionPane.showMessageDialog(null, "Docente registrado exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarDocente();
         }
         else{
@@ -88,6 +92,7 @@ public final class ControladorDocente implements ActionListener{
         vista.txtEmailDocente.setText(null);
         vista.txtTelefonoDocente.setText(null);
         vista.txtDireccionDocente.setText(null);
+        vista.txtCodigoDocente.setText(null);
         vista.cbxGenero.setSelectedIndex(0);
         ((JTextField)vista.DateDocente.getDateEditor().getUiComponent()).setText(null);      
     }
@@ -104,6 +109,7 @@ public final class ControladorDocente implements ActionListener{
         String dir = vista.txtDireccionDocente.getText();
         String gen = vista.cbxGenero.getSelectedItem().toString();
         String fec = vista.DateDocente.getDateFormatString();
+        int cod = Integer.parseInt(vista.txtCodigoDocente.getText());
         us.setNombres(nom);
         us.setApellidos(ap);
         us.setNid(nid);
@@ -111,14 +117,17 @@ public final class ControladorDocente implements ActionListener{
         us.setTelefono(tel);
         us.setDireccion(dir);
         us.setGenero(gen);
+        us.setCodigo(cod);
         us.setFecha_nacimiento(fec);
         int r = dao.actualizar(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro actualizado");
+            JOptionPane.showMessageDialog(null, "Docente actualizado exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarDocente();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Erroe", JOptionPane.ERROR_MESSAGE);
             limpiarDocente();
         }
     }
@@ -132,7 +141,8 @@ public final class ControladorDocente implements ActionListener{
         else{
             int doc = Integer.parseInt(vista.tblDocente.getValueAt(fila, 0).toString());
             dao.eliminar(doc);
-            JOptionPane.showMessageDialog(vista, "Registro eliminado");
+            JOptionPane.showMessageDialog(null, "Docente eliminado!", 
+                    "Atencion", JOptionPane.ERROR_MESSAGE);
             limpiarDocente();
         }
         
@@ -169,12 +179,14 @@ public final class ControladorDocente implements ActionListener{
                 String dir = vista.tblDocente.getValueAt(fila, 6).toString();
                 String gen = vista.tblDocente.getValueAt(fila, 7).toString();
                 String fec = vista.tblDocente.getValueAt(fila, 8).toString();
+                int cod = Integer.parseInt(vista.tblDocente.getValueAt(fila, 9).toString());
                 vista.txtNombreDocente.setText(nom);
                 vista.txtApellidoDocente.setText(ap);
                 vista.txtNidDocente.setText(""+nid);
                 vista.txtEmailDocente.setText(em);
                 vista.txtTelefonoDocente.setText(""+tel);
                 vista.txtDireccionDocente.setText(dir);
+                vista.txtCodigoDocente.setText(""+cod);
                 vista.cbxGenero.setSelectedItem(gen);
                 vista.DateDocente.setDateFormatString(fec);
             }

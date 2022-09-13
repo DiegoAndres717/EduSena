@@ -42,7 +42,7 @@ public class ControladorBuscarNotas implements ActionListener{
                vista.promed.setText(String.valueOf(us.getPromedio()));
             }
             else{
-                System.out.println("Há ocurrido un error");
+                JOptionPane.showMessageDialog(null, "Codigo no existe", "Atención", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

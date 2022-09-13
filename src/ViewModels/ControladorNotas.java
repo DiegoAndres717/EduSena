@@ -68,11 +68,13 @@ public final class ControladorNotas implements ActionListener{
         us.setPromedio(pro);
         int r = dao.agregar(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro exitoso!");
+            JOptionPane.showMessageDialog(null, "Nota agregada exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarNotas();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
         limpiartabla();
     }
@@ -106,11 +108,13 @@ public final class ControladorNotas implements ActionListener{
         us.setPromedio(pro);
         int r = dao.actualizarNota(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro actualizado");
+            JOptionPane.showMessageDialog(null, "Nota actualizado exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarNotas();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
             
         }
     }

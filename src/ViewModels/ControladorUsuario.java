@@ -33,13 +33,12 @@ public final class ControladorUsuario implements ActionListener{
     public void ListarUsuario(JTable tblusuarios){
         modelo = (DefaultTableModel) tblusuarios.getModel();
         List<Usuario> listacursos = cur.listar();
-        Object[] object = new Object[5];
+        Object[] object = new Object[4];
         for (int i = 0; i < listacursos.size(); i++) {
             object[0] = listacursos.get(i).getId();
-            object[1] = listacursos.get(i).getUsuario();
-            object[2] = listacursos.get(i).getContraseña();
-            object[3] = listacursos.get(i).getRol();
-            object[4] = listacursos.get(i).getActivo();
+            object[1] = listacursos.get(i).getContraseña();
+            object[2] = listacursos.get(i).getRol();
+            object[3] = listacursos.get(i).getActivo();
             modelo.addRow(object);
         }
         vista.tblUsuarios.setModel(modelo);
@@ -49,21 +48,23 @@ public final class ControladorUsuario implements ActionListener{
      *metodo para agregar a la tabla
      */
     public void agregarUsuario(){
-        String cocu = (vista.txtUsuario.getText());
+        //int cocu = Integer.parseInt(vista.txtUsuario.getText());
         String cod = vista.txtContraseñaUsuario.getPassword().toString();
         String nom = vista.cbxRolUsuario.getSelectedItem().toString();
         String act = (vista.txtActivo.getText());
-        us.setUsuario(cocu);
+        //us.setId(cocu);
         us.setContraseña(cod);
         us.setRol(nom);
         us.setActivo(act);
         int r = cur.agregarUsu(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro exitoso!");
+            JOptionPane.showMessageDialog(null, "Usuario registrado exitosamente!", 
+                    "Atención!", JOptionPane.INFORMATION_MESSAGE);
             limpiarCampos();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
         limpiartablaCurso();
     }
@@ -72,27 +73,29 @@ public final class ControladorUsuario implements ActionListener{
      *Metodo para actualizar la tabla
      */
     public void actualizarCurso(){
-        String gra = vista.txtUsuario.getText();
+        //int cocu = Integer.parseInt(vista.txtUsuario.getText());
         String cod = vista.txtContraseñaUsuario.getPassword().toString();
         String gen = vista.cbxRolUsuario.getSelectedItem().toString();
         String act = vista.txtActivo.getText();
-        us.setUsuario(gra);
+        //us.setId(cocu);
         us.setContraseña(cod);
         us.setRol(gen);
         us.setActivo(act);
         int r = cur.actualizarUsuarios(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro actualizado");
+            JOptionPane.showMessageDialog(null, "Usuario actualizado exitosamente!", 
+                    "Atención!", JOptionPane.INFORMATION_MESSAGE);
             limpiarCampos();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
     
     //metodo para limpiar los campos de textos
     public void limpiarCampos(){
-        vista.txtUsuario.setText(null);
+        vista.txtCodigoUsuario.setText(null);
         vista.txtContraseñaUsuario.setText(null);
         vista.cbxRolUsuario.setSelectedItem(0);
         vista.txtActivo.setText(null);
@@ -118,13 +121,13 @@ public final class ControladorUsuario implements ActionListener{
                 JOptionPane.showMessageDialog(vista, "Debe seleccionar un registro");
             }
             else{
-                //vista.cbxRolUsuario.setEditable(false);
+                vista.txtCodigoUsuario.setEditable(false);
                 int id = Integer.parseInt(vista.tblUsuarios.getValueAt(fila, 0).toString());
-                String cocu = vista.tblUsuarios.getValueAt(fila, 1).toString();
-                String cod = vista.tblUsuarios.getValueAt(fila, 2).toString();
-                String nom = vista.tblUsuarios.getValueAt(fila, 3).toString();
-                String act = vista.tblUsuarios.getValueAt(fila, 4).toString();
-                vista.txtUsuario.setText(cocu);
+                String cocu = vista.tblUsuarios.getValueAt(fila, 0).toString();
+                String cod = vista.tblUsuarios.getValueAt(fila, 1).toString();
+                String nom = vista.tblUsuarios.getValueAt(fila, 2).toString();
+                String act = vista.tblUsuarios.getValueAt(fila, 3).toString();
+                vista.txtCodigoUsuario.setText(cocu);
                 vista.txtContraseñaUsuario.setText(cod);
                 vista.cbxRolUsuario.setSelectedItem(nom);
                 vista.txtActivo.setText(act);
@@ -133,6 +136,7 @@ public final class ControladorUsuario implements ActionListener{
         if(e.getSource() == vista.btnActualizarUsuario){
             actualizarCurso();
             limpiartablaCurso();
+            limpiarCampos();
             ListarUsuario(vista.tblUsuarios);
         }
         

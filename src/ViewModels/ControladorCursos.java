@@ -54,11 +54,14 @@ public final class ControladorCursos implements ActionListener{
         us.setIdProfesor(nom);
         int r = cur.agregarCurso(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro exitoso!");
+            JOptionPane.showMessageDialog(null, "Curso agregado exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarCampos();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            limpiarCampos();
         }
         limpiartablaCurso();
     }
@@ -73,11 +76,13 @@ public final class ControladorCursos implements ActionListener{
         us.setIdProfesor(cod);
         int r = cur.actualizarCu(us);
         if(r == 1){
-            JOptionPane.showMessageDialog(vista, "Registro actualizado");
+            JOptionPane.showMessageDialog(null, "Curso actualizado exitosamente",
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
             limpiarCampos();
         }
         else{
-            JOptionPane.showMessageDialog(vista, "Error, intente de nuevo");
+            JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -90,7 +95,8 @@ public final class ControladorCursos implements ActionListener{
         else{
             int doc = Integer.parseInt(vista.tblCursos.getValueAt(fila, 0).toString());
             cur.eliminarCursos(doc);
-            JOptionPane.showMessageDialog(vista, "Registro eliminado");
+            JOptionPane.showMessageDialog(null, "Curso eliminado exitosamente", 
+                    "Atención", JOptionPane.INFORMATION_MESSAGE);
         }
         
     }

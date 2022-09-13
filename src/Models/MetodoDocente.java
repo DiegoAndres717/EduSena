@@ -29,6 +29,7 @@ public class MetodoDocente {
                 u.setTelefono(rs.getString("telefono"));
                 u.setDireccion(rs.getString("direccion"));
                 u.setGenero(rs.getString("genero"));
+                u.setCodigo(rs.getInt("codigo"));
                 u.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
                 lista.add(u);
             }
@@ -40,7 +41,7 @@ public class MetodoDocente {
     public int agregar(Persona u){
         int r = 1;
         String sql = "INSERT INTO docentes (nombres, apellidos, nid, email, telefono, "
-                + "direccion, genero, fecha_nacimiento) VALUES(?,?,?,?,?,?,?,?)";
+                + "direccion, genero, fecha_nacimiento, codigo) VALUES(?,?,?,?,?,?,?,?,?)";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
@@ -52,6 +53,7 @@ public class MetodoDocente {
             ps.setString(6, u.getDireccion());
             ps.setString(7, u.getGenero());
             ps.setString(8, u.getFecha_nacimiento());
+            ps.setString(9, Integer.toString(u.getCodigo()));
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -65,10 +67,39 @@ public class MetodoDocente {
         return r;
     }
     
+    public boolean UsuarioIngresadoD(Persona u) {
+
+        String sql = "SELECT * FROM edusena.docentes where codigo=?";
+        try {
+            con = conectar.getConnecion();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, u.getCodigo());
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                u.setNombres(rs.getString("nombres"));
+                u.setApellidos(rs.getString("apellidos"));
+                u.setNid(rs.getString("nid"));
+                u.setEmail(rs.getString("email"));
+                u.setTelefono(rs.getString("telefono"));
+                u.setDireccion(rs.getString("direccion"));
+                u.setGenero(rs.getString("genero"));
+                u.setCodigo(rs.getInt("codigo"));
+                u.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
+               
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            System.out.println("No hay acceso a la base de datos");
+            return false;
+        }
+       
+    }
+    
     public int actualizar(Persona u){
         int r = 1;
         String sql = "UPDATE edusena.docentes SET nombres=?, apellidos=?, email=?,"
-                + "telefono=?, direccion=?, genero=?, fecha_nacimiento=? WHERE nid=?";
+                + "telefono=?, direccion=?, genero=?, fecha_nacimiento=?, codigo=? WHERE nid=?";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
@@ -79,7 +110,8 @@ public class MetodoDocente {
             ps.setString(5, u.getDireccion());
             ps.setString(6, u.getGenero());
             ps.setString(7,  u.getFecha_nacimiento());
-            ps.setString(8, (u.getNid()));
+            ps.setString(8, Integer.toString(u.getCodigo()));
+            ps.setString(9, (u.getNid()));
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -94,7 +126,7 @@ public class MetodoDocente {
     }
     
     public void eliminar(int doc){
-        String sql = "DELETE FROM edusena.docentes WHERE id="+doc;
+        String sql = "DELETE FROM edusena.docentes WHERE idProfesor="+doc;
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);

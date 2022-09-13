@@ -25,12 +25,13 @@ public class MetodoAlumno {
                 u.setNombres(rs.getString("nombres"));
                 u.setApellidos(rs.getString("apellidos"));
                 u.setNid(rs.getString("nid"));
-                u.setGrado(rs.getInt("grado"));
+                u.setGrado(rs.getString("grado"));
                 u.setEmail(rs.getString("email"));
                 u.setTelefono(rs.getString("telefono"));
                 u.setDireccion(rs.getString("direccion"));
                 u.setGenero(rs.getString("genero"));
                 u.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
+                u.setCodigo(rs.getInt("codigoAlu"));
                 lista.add(u);
             }
         } catch (SQLException e) {
@@ -41,19 +42,21 @@ public class MetodoAlumno {
     public int agregarAlumno(Persona u){
         int r = 1;
         String sql = "INSERT INTO edusena.alumnos (nombres, apellidos, nid, grado, email, telefono, "
-                + "direccion, genero, fecha_nacimiento) VALUES(?,?,?,?,?,?,?,?,?)";
+                + "direccion, genero, fecha_nacimiento, codigoAlu)"
+                + " VALUES(?,?,?,?,?,?,?,?,?,?)";
         try {
             con = conectarAlumno.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setString(1, u.getNombres());
             ps.setString(2, u.getApellidos());
             ps.setString(3, (u.getNid()));
-            ps.setString(4, Integer.toString(u.getGrado()));
+            ps.setString(4, (u.getGrado()));
             ps.setString(5, u.getEmail());
             ps.setString(6, (u.getTelefono()));
             ps.setString(7, u.getDireccion());
             ps.setString(8, u.getGenero());
             ps.setString(9, u.getFecha_nacimiento());
+            ps.setString(10, Integer.toString(u.getCodigo()));
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -62,29 +65,30 @@ public class MetodoAlumno {
                 return 0;
             }
         } catch (SQLException e) {
-            System.out.println("No hay acceso a la base de datos");
+            System.out.println("hay acceso a la base de datos");
         }
         return r;
     }
     
     public boolean UsuarioIngresado(Persona P) {
 
-        String sql = "SELECT * FROM edusena.notas where idAlumno=?";
+        String sql = "SELECT * FROM edusena.alumnos where codigoAlu=?";
         try {
             con = conectarAlumno.getConnecion();
             ps = con.prepareStatement(sql);
-            ps.setInt(1, P.getId());
+            ps.setInt(1, P.getCodigo());
             rs = ps.executeQuery();
             if (rs.next()) {
                 P.setNombres(rs.getString("nombres"));
                 P.setApellidos(rs.getString("apellidos"));
                 P.setNid(rs.getString("nid"));
-                P.setGrado(rs.getInt("grado"));
+                P.setGrado(rs.getString("grado"));
                 P.setEmail(rs.getString("email"));
                 P.setTelefono(rs.getString("telefono"));
                 P.setDireccion(rs.getString("direccion"));
                 P.setGenero(rs.getString("genero"));
                 P.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
+               
                 return true;
             }
             return false;
@@ -97,20 +101,21 @@ public class MetodoAlumno {
     
     public int actualizarAlumnos(Persona u){
         int r = 1;
-        String sql = "UPDATE edusena.alumnos SET nombres=?, apellidos=?, grado=?, email=?,"
-                + "telefono=?, direccion=?, genero=?, fecha_nacimiento=? WHERE nid=?";
+        String sql = "UPDATE edusena.alumnos SET nombres=?, apellidos=?, nid=?, grado=?, email=?,"
+                + "telefono=?, direccion=?, genero=?, fecha_nacimiento=? WHERE codigoAlu=?";
         try {
             con = conectarAlumno.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setString(1, u.getNombres());
             ps.setString(2, u.getApellidos());
-            ps.setString(3, Integer.toString(u.getGrado()));
-            ps.setString(4, u.getEmail());
-            ps.setString(5, (u.getTelefono()));
-            ps.setString(6, u.getDireccion());
-            ps.setString(7, u.getGenero());
-            ps.setString(8,  u.getFecha_nacimiento());
-            ps.setString(9, (u.getNid()));
+            ps.setString(3, (u.getNid()));
+            ps.setString(4, (u.getGrado()));
+            ps.setString(5, u.getEmail());
+            ps.setString(6, (u.getTelefono()));
+            ps.setString(7, u.getDireccion());
+            ps.setString(8, u.getGenero());
+            ps.setString(9,  u.getFecha_nacimiento());
+            ps.setString(10, Integer.toString(u.getCodigo()));
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -125,7 +130,7 @@ public class MetodoAlumno {
     }
     
     public void eliminarAlumno(int doc){
-        String sql = "DELETE FROM edusena.alumnos WHERE id="+doc;
+        String sql = "DELETE FROM edusena.alumnos WHERE idAlumno="+doc;
         try {
             con = conectarAlumno.getConnecion();
             ps = con.prepareStatement(sql);
