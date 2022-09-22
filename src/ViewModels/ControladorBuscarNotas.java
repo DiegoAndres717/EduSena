@@ -33,7 +33,8 @@ public class ControladorBuscarNotas implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnBuscarNotaAlumn) {
-            us.setIdAlumno(Integer.parseInt(vista.txtCodigoBuscarNota1.getText()));
+            us.setIdAlumno(Integer.parseInt(vista.txtCodigoBuscarNota2.getText()));
+            us.setIdCurso(Integer.parseInt(vista.txtCodigoBuscarMate1.getText()));
             if (dao.listarBusqueda(us)) {
                vista.txtNota1Estudiante.setText(String.valueOf(us.getNota1()));
                vista.txtNota2Estudiante.setText(String.valueOf(us.getNota2()));

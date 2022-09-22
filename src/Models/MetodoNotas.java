@@ -44,11 +44,12 @@ public class MetodoNotas {
 
     public boolean listarBusqueda(Notas N) {
 
-        String sql = "SELECT * FROM edusena.notas where idAlumno=?";
+        String sql = "SELECT * FROM edusena.notas where idAlumno=? and idCurso=?";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setInt(1, N.getIdAlumno());
+            ps.setInt(2, N.getIdCurso());
             rs = ps.executeQuery();
             if (rs.next()) {
                 N.setNota1(Double.parseDouble(rs.getString("nota1")));
@@ -66,7 +67,7 @@ public class MetodoNotas {
        
     }
 
-    public int agregar(Notas u) {
+    public int agregarNota(Notas u) {
         int r = 1;
         String sql = "INSERT INTO edusena.notas (idCurso, idAlumno, nota1, nota2, nota3, nota4, "
                 + "promedio) VALUES(?,?,?,?,?,?,?)";
@@ -119,7 +120,7 @@ public class MetodoNotas {
     }
 
     public void eliminar(int doc) {
-        String sql = "DELETE FROM edusena.notas WHERE id=" + doc;
+        String sql = "DELETE FROM edusena.notas WHERE idNotas=" + doc;
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);

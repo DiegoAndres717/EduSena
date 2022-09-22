@@ -66,7 +66,7 @@ public final class ControladorNotas implements ActionListener{
         us.setNota3(n3);
         us.setNota4(n4);
         us.setPromedio(pro);
-        int r = dao.agregar(us);
+        int r = dao.agregarNota(us);
         if(r == 1){
             JOptionPane.showMessageDialog(null, "Nota agregada exitosamente",
                     "Atención", JOptionPane.INFORMATION_MESSAGE);

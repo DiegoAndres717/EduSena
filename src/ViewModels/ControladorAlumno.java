@@ -26,6 +26,7 @@ public final class ControladorAlumno implements ActionListener{
         this.vista.btnActualizaAlumno.addActionListener(this);
         this.vista.btnBorrarAlumno.addActionListener(this);
         ListarAlumno(vista.tblAlumnos);
+        ListarAlumProf(vista.tblAlumnos1);
     }
     
     /**
@@ -50,7 +51,27 @@ public final class ControladorAlumno implements ActionListener{
             object[10] = listaUsuarios.get(i).getCodigo();
             modelo.addRow(object);
         }
-        vista.tblAlumnos.setModel(modelo);
+        vista.tblAlumnos1.setModel(modelo);
+    }
+    
+    public void ListarAlumProf(JTable tblAlumnos1){
+        modelo = (DefaultTableModel) tblAlumnos1.getModel();
+        List<Persona> listaUsuarios = alum.listarAlumnoProf();
+        Object[] object = new Object[10];
+        for (int i = 0; i < listaUsuarios.size(); i++) {
+            object[0] = listaUsuarios.get(i).getId();
+            object[1] = listaUsuarios.get(i).getNombres();
+            object[2] = listaUsuarios.get(i).getApellidos();
+            object[3] = listaUsuarios.get(i).getGrado();
+            object[4] = listaUsuarios.get(i).getEmail();
+            object[5] = listaUsuarios.get(i).getTelefono();
+            object[6] = listaUsuarios.get(i).getDireccion();
+            object[7] = listaUsuarios.get(i).getGenero();
+            object[8] = listaUsuarios.get(i).getFecha_nacimiento();
+            object[9] = listaUsuarios.get(i).getCodigo();
+            modelo.addRow(object);
+        }
+        vista.tblAlumnos1.setModel(modelo);
     }
     
     /**

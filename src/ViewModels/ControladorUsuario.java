@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 public final class ControladorUsuario implements ActionListener{
   
-    
+    Hash has = new Hash();
     Usuario us = new Usuario();
     MetodoUsuario cur = new MetodoUsuario();
     Colegio vista = new Colegio();
@@ -53,7 +53,7 @@ public final class ControladorUsuario implements ActionListener{
         String nom = vista.cbxRolUsuario.getSelectedItem().toString();
         String act = (vista.txtActivo.getText());
         //us.setId(cocu);
-        us.setContraseña(cod);
+        us.setContraseña(Hash.sha1(cod));
         us.setRol(nom);
         us.setActivo(act);
         int r = cur.agregarUsu(us);
@@ -78,7 +78,7 @@ public final class ControladorUsuario implements ActionListener{
         String gen = vista.cbxRolUsuario.getSelectedItem().toString();
         String act = vista.txtActivo.getText();
         //us.setId(cocu);
-        us.setContraseña(cod);
+        us.setContraseña(Hash.sha1(cod));
         us.setRol(gen);
         us.setActivo(act);
         int r = cur.actualizarUsuarios(us);

@@ -1,6 +1,7 @@
 package Views;
 
 import Conexion.Conexion;
+import Models.Hash;
 import Models.MetodoAlumno;
 import Models.MetodoDocente;
 import Models.Persona;
@@ -272,12 +273,14 @@ public class LoginEduSena extends javax.swing.JFrame {
 
         login = new ControladorLogin(label, textField);
         Object[] objects = login.Login();
-
+        
+        Hash enco = new Hash();
         String user = txtUsuario.getText();
         String pass = new String(txtPassword.getPassword());
+        //pass = Hash.md5(String.valueOf((txtPassword.getPassword())));
         String roll = (String) cbxRoles.getSelectedItem();
         String sql = "SELECT idCodigo, contraseña, rol FROM "
-                + "usuarios WHERE idCodigo='" + user + "' AND contraseña='" + pass + "' AND rol='" + roll + "' AND activo = 1";
+                + "usuarios WHERE idCodigo='" + user + "' AND contraseña='" + (pass) + "' AND rol='" + roll + "' AND activo = 1";
         Conexion conectar = new Conexion();
         Connection con;
         PreparedStatement ps;
