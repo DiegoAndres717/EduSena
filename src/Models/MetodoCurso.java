@@ -27,6 +27,7 @@ public class MetodoCurso {
                 lista.add(u);
             }
         } catch (SQLException e) {
+            System.out.println("No hay acceso a la base de datos");
         }
         return lista;
     }
@@ -54,12 +55,13 @@ public class MetodoCurso {
     
     public int actualizarCu(Cursos u){
         int r = 1;
-        String sql = "UPDATE edusena.cursos SET materia=?, WHERE idProfesor=?";
+        String sql = "UPDATE edusena.cursos SET materia=?, idProfesor=? WHERE idCurso=?;";
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);
             ps.setString(1, u.getMateria());
             ps.setString(2, u.getIdProfesor());
+            ps.setString(2, u.getCodigoCurso());
             ps.executeUpdate();
             if(r == 1){
                 return 1;
@@ -74,7 +76,7 @@ public class MetodoCurso {
     }
     
     public void eliminarCursos(int doc){
-        String sql = "DELETE FROM edusena.cursos WHERE id="+doc;
+        String sql = "DELETE FROM edusena.cursos WHERE idCurso="+doc;
         try {
             con = conectar.getConnecion();
             ps = con.prepareStatement(sql);

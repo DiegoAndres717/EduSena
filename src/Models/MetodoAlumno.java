@@ -94,7 +94,7 @@ public class MetodoAlumno {
                 return 0;
             }
         } catch (SQLException e) {
-            System.out.println("hay acceso a la base de datos");
+            System.out.println("kkklkkkhay acceso a la base de datos");
         }
         return r;
     }

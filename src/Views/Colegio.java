@@ -175,7 +175,6 @@ public class Colegio extends javax.swing.JFrame {
         lblmateria = new javax.swing.JLabel();
         lblCodigoAlumno27 = new javax.swing.JLabel();
         btnSeleccionarCurso = new newscomponents.RSButtonIcon_new();
-        btnActualizarCurso = new newscomponents.RSButtonIcon_new();
         btnAgregarCursos = new newscomponents.RSButtonIcon_new();
         btnBorrarCurso = new newscomponents.RSButtonIcon_new();
         txtCursoidProfesor = new RSMaterialComponent.RSTextFieldTwo();
@@ -1248,14 +1247,7 @@ public class Colegio extends javax.swing.JFrame {
         btnSeleccionarCurso.setText("Select");
         btnSeleccionarCurso.setBackgroundHover(new java.awt.Color(0, 153, 51));
         btnSeleccionarCurso.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.SEND);
-        jpnCursoTodos.add(btnSeleccionarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 100, 30));
-
-        btnActualizarCurso.setBackground(new java.awt.Color(204, 204, 0));
-        btnActualizarCurso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnActualizarCurso.setText("Update");
-        btnActualizarCurso.setBackgroundHover(new java.awt.Color(255, 255, 51));
-        btnActualizarCurso.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.UPDATE);
-        jpnCursoTodos.add(btnActualizarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 100, 30));
+        jpnCursoTodos.add(btnSeleccionarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 100, 30));
 
         btnAgregarCursos.setBackground(new java.awt.Color(0, 153, 0));
         btnAgregarCursos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1267,14 +1259,14 @@ public class Colegio extends javax.swing.JFrame {
                 btnAgregarCursosActionPerformed(evt);
             }
         });
-        jpnCursoTodos.add(btnAgregarCursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 100, 30));
+        jpnCursoTodos.add(btnAgregarCursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 330, 100, 30));
 
         btnBorrarCurso.setBackground(new java.awt.Color(255, 51, 0));
         btnBorrarCurso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnBorrarCurso.setText("Delete");
         btnBorrarCurso.setBackgroundHover(new java.awt.Color(255, 51, 51));
         btnBorrarCurso.setIcons(rojeru_san.efectos.ValoresEnum.ICONS.DELETE);
-        jpnCursoTodos.add(btnBorrarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 100, 30));
+        jpnCursoTodos.add(btnBorrarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 100, 30));
 
         txtCursoidProfesor.setForeground(new java.awt.Color(0, 0, 0));
         txtCursoidProfesor.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -2055,7 +2047,6 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JLabel LOGO1;
     public javax.swing.JTextField Nota4;
     public newscomponents.RSButtonIcon_new btnActualizaAlumno;
-    public newscomponents.RSButtonIcon_new btnActualizarCurso;
     public newscomponents.RSButtonIcon_new btnActualizarDocente;
     public newscomponents.RSButtonIcon_new btnActualizarNotaDoc;
     public newscomponents.RSButtonIcon_new btnActualizarUsuario;

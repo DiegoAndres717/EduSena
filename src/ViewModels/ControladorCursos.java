@@ -22,7 +22,6 @@ public final class ControladorCursos implements ActionListener{
         this.vista = vista;
         this.vista.btnAgregarCursos.addActionListener(this);
         this.vista.btnSeleccionarCurso.addActionListener(this);
-        this.vista.btnActualizarCurso.addActionListener(this);
         this.vista.btnBorrarCurso.addActionListener(this);
         ListarCursos(vista.tblCursos);
     }
@@ -72,8 +71,10 @@ public final class ControladorCursos implements ActionListener{
     public void actualizarCurso(){
         String gen = vista.cbxCursoMateria.getSelectedItem().toString();
         String cod = (vista.txtCursoidProfesor.getText());
+        int codCur = Integer.parseInt(vista.txtCodigoCurso1.getText());
         us.setMateria(gen);
         us.setIdProfesor(cod);
+        us.setMateria(""+codCur);
         int r = cur.actualizarCu(us);
         if(r == 1){
             JOptionPane.showMessageDialog(null, "Curso actualizado exitosamente",
@@ -104,6 +105,7 @@ public final class ControladorCursos implements ActionListener{
     public void limpiarCampos(){
         vista.cbxCursoMateria.setSelectedItem(0);
         vista.txtCursoidProfesor.setText(null);
+        vista.txtCodigoCurso1.setText(null);
     }
     public void limpiartablaCurso(){
         for (int i = 0; i < vista.tblCursos.getRowCount(); i++) {
@@ -130,18 +132,15 @@ public final class ControladorCursos implements ActionListener{
                 int id = Integer.parseInt(vista.tblCursos.getValueAt(fila, 0).toString());
                 String cod = vista.tblCursos.getValueAt(fila, 1).toString();
                 String nom = vista.tblCursos.getValueAt(fila, 2).toString();
+                vista.txtCodigoCurso1.setText(""+id);
                 vista.cbxCursoMateria.setSelectedItem(cod);
                 vista.txtCursoidProfesor.setText(nom);
             }
         }
-        if(e.getSource() == vista.btnActualizarCurso){
-            actualizarCurso();
-            limpiartablaCurso();
-            ListarCursos(vista.tblCursos);
-        }
         if(e.getSource() == vista.btnBorrarCurso){
             eliminarCurso();
             limpiartablaCurso();
+            limpiarCampos();
             ListarCursos(vista.tblCursos);
         }
     }

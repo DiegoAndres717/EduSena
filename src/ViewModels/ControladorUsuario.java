@@ -66,13 +66,13 @@ public final class ControladorUsuario implements ActionListener{
             JOptionPane.showMessageDialog(null, "Intente de nuevo!", 
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
-        limpiartablaCurso();
+        limpiartablaUsuario();
     }
     
     /**
      *Metodo para actualizar la tabla
      */
-    public void actualizarCurso(){
+    public void actualizarUsuario(){
         //int cocu = Integer.parseInt(vista.txtUsuario.getText());
         String cod = vista.txtContraseñaUsuario.getPassword().toString();
         String gen = vista.cbxRolUsuario.getSelectedItem().toString();
@@ -100,7 +100,7 @@ public final class ControladorUsuario implements ActionListener{
         vista.cbxRolUsuario.setSelectedItem(0);
         vista.txtActivo.setText(null);
     }
-    public void limpiartablaCurso(){
+    public void limpiartablaUsuario(){
         for (int i = 0; i < vista.tblUsuarios.getRowCount(); i++) {
             modelo.removeRow(i);
             i = i - 1;
@@ -112,7 +112,7 @@ public final class ControladorUsuario implements ActionListener{
         //Acción para agregar un registro
         if(e.getSource() == vista.btnAgregarUsuario){
             agregarUsuario();
-            limpiartablaCurso();
+            limpiartablaUsuario();
             ListarUsuario(vista.tblUsuarios);
         }
         if(e.getSource() == vista.btnSeleccionarUsuarios){
@@ -121,7 +121,7 @@ public final class ControladorUsuario implements ActionListener{
                 JOptionPane.showMessageDialog(vista, "Debe seleccionar un registro");
             }
             else{
-                vista.txtCodigoUsuario.setEditable(false);
+                //vista.txtCodigoUsuario.setEditable(false);
                 int id = Integer.parseInt(vista.tblUsuarios.getValueAt(fila, 0).toString());
                 String cocu = vista.tblUsuarios.getValueAt(fila, 0).toString();
                 String cod = vista.tblUsuarios.getValueAt(fila, 1).toString();
@@ -134,8 +134,8 @@ public final class ControladorUsuario implements ActionListener{
             }
         }
         if(e.getSource() == vista.btnActualizarUsuario){
-            actualizarCurso();
-            limpiartablaCurso();
+            actualizarUsuario();
+            limpiartablaUsuario();
             limpiarCampos();
             ListarUsuario(vista.tblUsuarios);
         }
