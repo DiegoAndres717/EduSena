@@ -4,12 +4,12 @@ package Models;
 public class Persona {
     
     private int id;
-    private String codigo;
+    private int codigo;
     private String nombres;
     private String apellidos;
     private String nid;
-    private int grado;
-    private int edad;
+    private String grado;
+    private String contraseña;
     private String email;
     private String telefono;
     private String direccion;
@@ -20,14 +20,15 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int id, String codigo, String nombres, String apellidos, String nid, int grado, int edad, String email, String telefono, String direccion, String genero, String fecha_nacimiento) {
+    public Persona(int id, int codigo, String nombres, String apellidos, String nid, 
+            String grado, String contraseña, String email, String telefono, String direccion, String genero, String fecha_nacimiento) {
         this.id = id;
         this.codigo = codigo;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.nid = nid;
         this.grado = grado;
-        this.edad = edad;
+        this.contraseña = contraseña;
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
@@ -43,11 +44,11 @@ public class Persona {
         this.id = id;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -75,20 +76,20 @@ public class Persona {
         this.nid = nid;
     }
 
-    public int getGrado() {
+    public String getGrado() {
         return grado;
     }
 
-    public void setGrado(int grado) {
+    public void setGrado(String grado) {
         this.grado = grado;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setContraseña(String edad) {
+        this.contraseña = contraseña;
     }
 
     public String getEmail() {
